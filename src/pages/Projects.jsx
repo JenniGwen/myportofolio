@@ -34,7 +34,7 @@ export const projectsData = [
     tagline: 'IoT + AI River Garbage Cleaner',
     category: 'IoT / Embedded Systems',
     icon: Cpu,
-    image: '/hydrogel.png',
+    image: '/hydrion.png',
     description: 'Served as the AI Engineer for Hydrion, an IoT and AI-powered river waste cleaner recognized as a Top 10 Finalist in the Samsung Solve for Tomorrow Competition Indonesia 2025. Built in a team with Jiovanny Lim and Aviel Aquino, I custom-trained YOLO models to detect and classify organic versus non-organic river trash in real-time. Collaborated on designing the hardware and communication infrastructure using Arduino, C, and MQTT protocols to coordinate autonomous cleanup actions.',
     github: 'https://github.com/JenniGwen/HYDROGEL-SFT-SEMIFINAL',
     demo: null,
