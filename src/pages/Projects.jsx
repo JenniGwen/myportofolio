@@ -30,16 +30,16 @@ export const projectsData = [
   },
   {
     id: 'photobooth',
-    title: 'Desktop Photobooth Web Application',
-    tagline: 'High-performance Photobooth SDLC',
+    title: 'Photoboothique',
+    tagline: 'Desktop Photobooth Web Application',
     category: 'Full-stack Web',
     icon: Code,
-    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=600&auto=format&fit=crop',
-    description: 'Project manager and lead developer building a high-performance photobooth web application using the Laravel framework. Managed the full software development lifecycle (SDLC) from requirement gathering, database schema design to responsive interface implementation.',
+    image: '/photoboothique.png',
+    description: 'A web application developed for the Software Engineering course at BINUS University in a team with Fairy Yumi Ranita and Jiovanny Lim. Served as the Project Manager leading the development lifecycle according to the Waterfall SDLC. Personally responsible for designing and implementing the database schema for image storage, integrating Cloudinary for media gallery management, and configuring the QR code generation module for instant photo retrieval.',
     github: 'https://github.com/jenni-gwen/desktop-photobooth',
-    demo: null, // In progress
+    demo: null,
     youtube: null,
-    skills: ['Laravel', 'PHP', 'MySQL', 'Database Design', 'SDLC', 'Responsive UI']
+    skills: ['Laravel', 'PHP', 'MySQL', 'Cloudinary', 'QR Code Generation', 'Waterfall SDLC', 'Project Management']
   },
   {
     id: 'umkm-feedback',
