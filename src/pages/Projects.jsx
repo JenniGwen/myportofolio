@@ -75,7 +75,7 @@ export const projectsData = [
     icon: Code,
     image: 'https://images.unsplash.com/photo-1505242844900-a50e1ef0e8b0?q=80&w=600&auto=format&fit=crop',
     description: 'ShipDecKK is an interactive web showcase built using HTML, CSS, and vanilla Javascript. Features rich layouts and high-performance transitions for users to explore different ship models and specs.',
-    github: 'https://github.com/jenni-gwen/shipdeckk',
+    github: 'https://github.com/JenniGwen/AOLHCIIIIIIIIII',
     demo: 'https://shipdeckk.example.com',
     youtube: null,
     skills: ['HTML5', 'CSS3', 'JavaScript', 'DOM Manipulation', 'Web Performance']
