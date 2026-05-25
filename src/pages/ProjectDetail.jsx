@@ -150,7 +150,7 @@ export default function ProjectDetail({ currentPage, setCurrentPage, selectedPro
               </a>
 
               {/* Demo Link (only if available) */}
-              {project.demo ? (
+              {project.demo && (
                 <a
                   href={project.demo}
                   target="_blank"
@@ -160,19 +160,6 @@ export default function ProjectDetail({ currentPage, setCurrentPage, selectedPro
                 >
                   <ExternalLink size={18} /> Live Deployment
                 </a>
-              ) : (
-                <div style={{
-                  padding: '12px',
-                  borderRadius: '12px',
-                  background: 'rgba(239, 68, 68, 0.05)',
-                  border: '1px solid rgba(239, 68, 68, 0.15)',
-                  color: '#ef4444',
-                  fontSize: '0.85rem',
-                  textAlign: 'center',
-                  fontWeight: '600'
-                }}>
-                  Deployment Link Pending
-                </div>
               )}
             </div>
 
