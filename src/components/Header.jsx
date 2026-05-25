@@ -40,7 +40,7 @@ export default function Header({ currentPage, setCurrentPage }) {
               className={`nav-link ${currentPage === item.id ? 'active' : ''}`}
               style={{
                 border: 'none',
-                background: currentPage === item.id ? 'linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%)' : 'transparent',
+                background: currentPage === item.id ? 'linear-gradient(135deg, var(--btn-purple) 0%, var(--btn-pink) 100%)' : 'transparent',
                 color: currentPage === item.id ? '#ffffff' : 'var(--text-secondary)'
               }}
             >
@@ -70,7 +70,7 @@ export default function Header({ currentPage, setCurrentPage }) {
               className={`nav-link ${currentPage === item.id ? 'active' : ''}`}
               style={{
                 border: 'none',
-                background: currentPage === item.id ? 'linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%)' : 'transparent',
+                background: currentPage === item.id ? 'linear-gradient(135deg, var(--btn-purple) 0%, var(--btn-pink) 100%)' : 'transparent',
                 color: currentPage === item.id ? '#ffffff' : 'var(--text-secondary)',
                 textAlign: 'left',
                 width: '100%',

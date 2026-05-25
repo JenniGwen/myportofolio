@@ -258,7 +258,7 @@ export default function Home({ setCurrentPage }) {
                 style={{
                   textTransform: 'capitalize',
                   border: 'none',
-                  background: activeTab === tab ? 'linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%)' : 'rgba(255, 255, 255, 0.05)',
+                  background: activeTab === tab ? 'linear-gradient(135deg, var(--btn-purple) 0%, var(--btn-pink) 100%)' : 'rgba(255, 255, 255, 0.05)',
                   color: activeTab === tab ? 'white' : 'var(--text-secondary)'
                 }}
               >

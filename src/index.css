@@ -6,13 +6,18 @@
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   
-  /* Accent colors */
+  /* Text highlight colors (Bright for dark backgrounds) */
   --accent-purple: #c084fc;
   --accent-pink: #FFA1C5;
   --accent-yellow: #FCD34D;
   
-  /* Custom sequential gradient (brighter purple #9333EA, transitioning to pink #FFA1C5, and gold/yellow #FCD34D) */
-  --accent-gradient: linear-gradient(135deg, #9333ea 0%, #9333ea 50%, #FFA1C5 82%, #FCD34D 100%);
+  /* Button gradient colors (Darker/richer to contrast with white text) */
+  --btn-purple: #7c3aed;
+  --btn-pink: #db2777;
+  --btn-yellow-dark: #d97706;
+  
+  /* Custom sequential gradient (purple dominant, transitioning to pink and dark yellow) */
+  --accent-gradient: linear-gradient(135deg, var(--btn-purple) 0%, var(--btn-pink) 65%, var(--btn-yellow-dark) 100%);
   
   --glass-bg: rgba(13, 9, 29, 0.6);
   --glass-border: rgba(255, 255, 255, 0.07);
@@ -37,8 +42,8 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(255, 161, 197, 0.06) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.06) 0%, transparent 40%);
 }
 
 /* Background image overrides when home is selected */
@@ -64,11 +69,11 @@ body {
   background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(147, 51, 234, 0.3);
+  background: rgba(124, 58, 237, 0.3);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 161, 197, 0.5);
+  background: rgba(219, 39, 119, 0.5);
 }
 
 /* Typography */
@@ -139,9 +144,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link.active {
-  background: var(--accent-gradient);
+  background: linear-gradient(135deg, var(--btn-purple) 0%, var(--btn-pink) 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.35);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
 }
 
 /* Glassmorphism Cards */
@@ -157,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .glass-card:hover {
   border-color: var(--glass-border-glow);
-  box-shadow: 0 10px 40px 0 rgba(147, 51, 234, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(124, 58, 237, 0.25);
   transform: translateY(-2px);
 }
 
@@ -181,12 +186,12 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 8px;
   transition: var(--transition-smooth);
-  box-shadow: 0 4px 14px 0 rgba(147, 51, 234, 0.3);
+  box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.3);
 }
 
 .btn-gradient:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(147, 51, 234, 0.5);
+  box-shadow: 0 6px 20px 0 rgba(124, 58, 237, 0.5);
   filter: brightness(1.1);
 }
 
@@ -230,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
   border-radius: 50%; /* Clean circular format */
   border: 4px solid rgba(255, 255, 255, 0.25); /* Whitish glass border */
-  box-shadow: 0 8px 32px rgba(147, 51, 234, 0.35); /* Subtle purple drop shadow glow */
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.35); /* Subtle purple drop shadow glow */
   display: block;
 }
 
@@ -286,8 +291,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-input:focus {
   outline: none;
-  border-color: #9333ea;
-  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.25);
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
   background: rgba(13, 9, 29, 0.65);
 }
 
