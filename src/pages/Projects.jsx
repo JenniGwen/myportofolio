@@ -36,7 +36,7 @@ export const projectsData = [
     icon: Code,
     image: '/photoboothique.png',
     description: 'A web application developed for the Software Engineering course at BINUS University in a team with Fairy Yumi Ranita and Jiovanny Lim. Served as the Project Manager leading the development lifecycle according to the Waterfall SDLC. Personally responsible for designing and implementing the database schema for image storage, integrating Cloudinary for media gallery management, and configuring the QR code generation module for instant photo retrieval.',
-    github: 'https://github.com/jenni-gwen/desktop-photobooth',
+    github: 'https://github.com/mojiotoo/photoboothique',
     demo: null,
     youtube: null,
     skills: ['Laravel', 'PHP', 'MySQL', 'Cloudinary', 'QR Code Generation', 'Waterfall SDLC', 'Project Management']
