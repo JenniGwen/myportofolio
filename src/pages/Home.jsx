@@ -184,7 +184,7 @@ export default function Home({ setCurrentPage }) {
                 left: '0',
                 width: '60px',
                 height: '4px',
-                background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))',
+                background: 'linear-gradient(135deg, var(--accent-purple), var(--accent-pink))',
                 borderRadius: '2px'
               }}></span>
             </h2>
@@ -205,7 +205,7 @@ export default function Home({ setCurrentPage }) {
                 left: '0',
                 width: '60px',
                 height: '4px',
-                background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))',
+                background: 'linear-gradient(135deg, var(--accent-purple), var(--accent-pink))',
                 borderRadius: '2px'
               }}></span>
             </h2>
@@ -264,7 +264,7 @@ export default function Home({ setCurrentPage }) {
                 style={{
                   textTransform: 'capitalize',
                   border: 'none',
-                  background: activeTab === tab ? 'linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-yellow) 100%)' : 'rgba(255, 255, 255, 0.05)',
+                  background: activeTab === tab ? 'linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%)' : 'rgba(255, 255, 255, 0.05)',
                   color: activeTab === tab ? 'white' : 'var(--text-secondary)'
                 }}
               >
