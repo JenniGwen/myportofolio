@@ -73,7 +73,7 @@ export const projectsData = [
     tagline: 'Skin Lesion & Melanoma Detection',
     category: 'AI / Computer Vision',
     icon: Cpu,
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop',
+    image: '/dermaai.png',
     description: 'A computer vision application named dermaAI designed to detect skin lesions and melanoma, developed as a group project for the Computer Vision course at BINUS University. Developed in a team with Kelly Setiawan, Fairy Yumi Ranita, Jiovanny Lim, Aviel Aquino, and Jordhy Alexander Wibisono. Served as the Lead AI Engineer responsible for training and fine-tuning deep learning models to accurately classify lesions and melanoma from skin images.',
     github: 'https://github.com/techaddict34/ComVis-Project/tree/main',
     demo: null,
