@@ -21,32 +21,31 @@ export const activitiesData = [
   {
     id: 'aiesec-binus',
     title: 'AIESEC in BINUS',
-    subtitle: 'Project Controller & VP of Finance',
-    role: 'Team Member of Project Controller',
+    subtitle: 'Project Controller & Vice President of Finance',
+    role: 'OCVP Finance & Project Controller',
     duration: 'Feb 2025 - Jan 2026',
     icon: Shield,
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop',
     points: [
-      'Tracked and monitored 10+ concurrent projects, ensuring compliance with AIESEC and BINUS policies.',
-      'Led end-to-end planning and execution for initiatives (e.g. Global Village, Local Conference, Youth Career Compass).',
-      'Organizing Committee Vice President of Finance in Youth Today x Join AIESEC (July 2025 - Sep 2025): Developed and executed budget plans, monitored expenses, and processed 800+ invoices in one month.',
-      'Organizing Committee Vice President of Finance of Incoming Global Volunteer (March 2025 - August 2025): Controlled spending, managed reimbursements, and verified transactions to maintain financial accuracy.'
+      'Organizing Committee Vice President of Finance for Youth Today x Join AIESEC (July 2025 - Sep 2025): Spearheaded budgeting and expenditures for large-scale events, audited 800+ monthly invoices, trained teams on compliance, and drafted audit-ready reports.',
+      'Organizing Committee Vice President of Finance for Incoming Global Volunteer (Mar 2025 - Aug 2025): Administered budgets under AIESEC Indonesia\'s 70/30 framework, authorized disbursements, and prepared transparent financial statements.',
+      'Project Controller Team Member (Feb 2025 - Jan 2026): Tracked and monitored 10+ concurrent projects to ensure alignment with AIESEC and BINUS compliance regulations.',
+      'Collaborated closely with executive boards and cross-functional teams to optimize schedules, manage resources, and deliver impactful community programs.'
     ]
   },
   {
-    id: 'other-volunteering',
-    title: 'Leadership & Volunteering Activities',
-    subtitle: 'Social, Teaching, and Musical Contributions',
-    role: 'Volunteer',
-    duration: '2021 - 2025',
+    id: 'sjs-volunteering',
+    title: 'Saint John\'s School Meruya',
+    subtitle: 'Algorithm Teaching Program (Freshmen Project)',
+    role: 'Volunteer Teacher & Presenter',
+    duration: 'First Semester 2024',
     icon: Star,
-    image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop',
     points: [
-      'Incoming Global Volunteer Summer Peak AIESEC in BINUS (2025) - Engaged with cross-cultural teams for international exchange programs.',
-      'Teacher Volunteer in Saint John’s School Meruya (2024) - Facilitated courses and mentored junior high and senior high students.',
-      'Keyboardist at Church Mass (2024) - Provided musical accompaniment for weekly community congregations.',
-      'Kemah Budaya Atsanti Participant (2023) - Explored traditional cultural integration and arts development.',
-      'Event Speaker (MC) in Cettiya Pannashika (2021) - Hosted community youth ceremonies and cultural forums.'
+      'Collaborated on a mandatory freshmen community service project to teach Algorithm fundamentals to Primary 6 students at Saint John\'s School Meruya.',
+      'Partnered in a cross-functional team with Jiovanny Lim, Aviel Aquino, Pira Destyasha Safira, Brandon Angelo Halim, Xander Trevor Tengari, Jonathan Hassanudin, Vigo Lianto, Naufal Maulana Ichlas, Jason, and Freshmen Partner Steven Valentino Halim.',
+      'Designed interactive, engaging, and simplified logic lesson materials to introduce basic computer science and algorithmic workflows to young students.',
+      'Guided and mentored students through practical logic puzzles and interactive team activities to spark early interest in STEM and problem solving.'
     ]
   }
 ];
