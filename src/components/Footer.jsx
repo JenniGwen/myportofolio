@@ -24,14 +24,14 @@ export default function Footer({ setCurrentPage }) {
             Jennifer Gwen Tanadi
           </h4>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-            Computer Science Student @ BINUS University | Data Analytics & AI
+            Computer Science Student @ BINUS University | Data Analytics, AI and Software Engineer
           </p>
         </div>
 
         {/* Links */}
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
           <a 
-            href="https://github.com/jenni-gwen" 
+            href="https://github.com/JenniGwen" 
             target="_blank" 
             rel="noopener noreferrer"
             style={{ color: 'var(--text-secondary)', transition: 'var(--transition-smooth)' }}
@@ -68,7 +68,7 @@ export default function Footer({ setCurrentPage }) {
         borderTop: '1px solid rgba(255, 255, 255, 0.05)',
         paddingTop: '16px'
       }}>
-        © {new Date().getFullYear()} Jennifer Gwen Tanadi. Made with React, Vite & Antigravity.
+        © {new Date().getFullYear()} Jennifer Gwen Tanadi.
       </div>
     </footer>
   );
