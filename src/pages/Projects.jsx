@@ -68,17 +68,17 @@ export const projectsData = [
     skills: ['YOLO', 'Computer Vision', 'IoT', 'Arduino', 'C', 'MQTT', 'Deep Learning']
   },
   {
-    id: 'shipdeckk',
-    title: 'ShipDecKK',
-    tagline: 'Interactive Shipping Exhibition',
-    category: 'Frontend Web',
-    icon: Code,
-    image: 'https://images.unsplash.com/photo-1505242844900-a50e1ef0e8b0?q=80&w=600&auto=format&fit=crop',
-    description: 'ShipDecKK is an interactive web showcase built using HTML, CSS, and vanilla Javascript. Features rich layouts and high-performance transitions for users to explore different ship models and specs.',
-    github: 'https://github.com/JenniGwen/AOLHCIIIIIIIIII',
-    demo: 'https://shipdeckk.example.com',
+    id: 'dermaai',
+    title: 'dermaAI',
+    tagline: 'Skin Lesion & Melanoma Detection',
+    category: 'AI / Computer Vision',
+    icon: Cpu,
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop',
+    description: 'A computer vision application named dermaAI designed to detect skin lesions and melanoma, developed as a group project for the Computer Vision course at BINUS University. Developed in a team with Kelly Setiawan, Fairy Yumi Ranita, Jiovanny Lim, Aviel Aquino, and Jordhy Alexander Wibisono. Served as the Lead AI Engineer responsible for training and fine-tuning deep learning models to accurately classify lesions and melanoma from skin images.',
+    github: 'https://github.com/techaddict34/ComVis-Project/tree/main',
+    demo: null,
     youtube: null,
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'DOM Manipulation', 'Web Performance']
+    skills: ['PyTorch', 'Computer Vision', 'Deep Learning', 'Convolutional Neural Networks', 'Medical Imaging']
   }
 ];
 
