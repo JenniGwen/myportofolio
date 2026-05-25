@@ -55,11 +55,11 @@ export default function Contact() {
                 width: '44px',
                 height: '44px',
                 borderRadius: '10px',
-                background: 'rgba(252, 211, 77, 0.1)',
+                background: 'rgba(255, 161, 197, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'var(--accent-yellow)',
+                color: 'var(--accent-pink)',
                 flexShrink: 0
               }}>
                 <Phone size={20} />
@@ -67,7 +67,7 @@ export default function Contact() {
               <div style={{ textAlign: 'left' }}>
                 <h4 style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Call Me</h4>
                 <a href="tel:+6287882532006" style={{ color: 'white', textDecoration: 'none', fontWeight: '600', fontSize: '1.05rem', transition: 'var(--transition-smooth)' }}
-                   onMouseEnter={(e) => e.target.style.color = 'var(--accent-yellow)'}
+                   onMouseEnter={(e) => e.target.style.color = 'var(--accent-pink)'}
                    onMouseLeave={(e) => e.target.style.color = 'white'}>
                   +62 878-8253-2006
                 </a>

@@ -7,7 +7,7 @@
   --text-secondary: #94a3b8;
   
   /* Accent colors */
-  --accent-purple: #9333ea;
+  --accent-purple: #c084fc;
   --accent-pink: #FFA1C5;
   --accent-yellow: #FCD34D;
   
@@ -299,9 +299,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 9999px;
   font-size: 0.8rem;
   font-weight: 600;
-  background: rgba(252, 211, 77, 0.15);
-  border: 1px solid rgba(252, 211, 77, 0.25);
-  color: #FCD34D;
+  background: rgba(255, 161, 197, 0.15);
+  border: 1px solid rgba(255, 161, 197, 0.25);
+  color: var(--accent-pink);
 }
 
 /* Custom list bullet replacement */
@@ -320,6 +320,6 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0;
   top: 0;
-  color: #FCD34D;
+  color: #FFA1C5;
   font-weight: bold;
 }

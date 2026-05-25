@@ -222,7 +222,7 @@ export default function Home({ setCurrentPage }) {
                   </div>
                   <div>
                     <h3 style={{ fontSize: '1.25rem', color: 'white', fontWeight: '600' }}>{edu.school}</h3>
-                    <p style={{ color: 'var(--accent-yellow)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.degree}</p>
+                    <p style={{ color: 'var(--accent-pink)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.degree}</p>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: '4px 0' }}>{edu.duration}</p>
                     <p style={{ color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.details}</p>
                   </div>
@@ -391,7 +391,7 @@ export default function Home({ setCurrentPage }) {
                   <div>
                     <h4 style={{ color: 'white', fontSize: '1.05rem', fontWeight: '600' }}>{award.title}</h4>
                     {award.issuer && <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>{award.issuer}</p>}
-                    <p style={{ color: 'var(--accent-yellow)', fontSize: '0.85rem', fontWeight: '500', marginTop: '2px' }}>{award.year}</p>
+                    <p style={{ color: 'var(--accent-pink)', fontSize: '0.85rem', fontWeight: '500', marginTop: '2px' }}>{award.year}</p>
                   </div>
                 </div>
               ))}
