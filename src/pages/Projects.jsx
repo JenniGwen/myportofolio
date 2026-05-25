@@ -3,17 +3,17 @@ import { ArrowRight, Code, Database, Cpu, Globe } from 'lucide-react';
 
 export const projectsData = [
   {
-    id: 'deepfake-detection',
-    title: 'Deepfake Detection Pipeline Research',
-    tagline: 'AI Research for ICCSCI 2026',
-    category: 'AI / Machine Learning',
+    id: 'isitfake',
+    title: 'Isitfake?',
+    tagline: 'Deepfake Detection Web Application',
+    category: 'AI / Deep Learning',
     icon: Cpu,
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop',
-    description: 'Authored research paper "Enhancing Deepfake Detection Using SVM and Random Forest with Hybrid CNN-Frequency Features". Developed a hybrid detection pipeline combining a frozen EfficientNet-B0 backbone with frequency domain analysis to extract spectral artifacts via 2D-DFT. Achieved 81.30% accuracy on SVM classifers.',
-    github: 'https://github.com/jenni-gwen/deepfake-detection',
-    demo: null,
-    youtube: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder
-    skills: ['PyTorch', 'EfficientNet-B0', 'OpenCV', 'SVM', '2D-DFT', 'Frequency Analysis']
+    description: 'An application designed to detect facial deepfakes from user-uploaded images using custom-trained deep learning models. Developed in a team (with Jiovanny Lim and Aviel Aquino) where I served as the Lead AI Engineer for the AI Singapore Competition 2026. Built with React and Vite for the web frontend, this project was a valuable hands-on experience in productionizing deep learning models for media forensics.',
+    github: 'https://github.com/JenniGwen/deepfakeAppNEW',
+    demo: 'https://isitfake.vercel.app/',
+    youtube: 'https://www.youtube.com/embed/srJXPIgv9kY',
+    skills: ['React', 'Vite', 'PyTorch', 'EfficientNet-B0', 'OpenCV', 'Deep Learning']
   },
   {
     id: 'carbonis',
