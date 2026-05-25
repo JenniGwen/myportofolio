@@ -19,14 +19,14 @@ export const projectsData = [
     id: 'carbonis',
     title: 'Carbonis (Sustainability Tech)',
     tagline: 'Carbon Credit Exchange Platform',
-    category: 'Full-stack & Architecture',
+    category: 'Web3 & Sustainability',
     icon: Globe,
     image: 'https://images.unsplash.com/photo-1506069673806-3c4516395012?q=80&w=600&auto=format&fit=crop',
-    description: 'Led the strategic development and system architecture of Carbonis, a carbon credit exchange platform enabling waste management sites (TPA) to monetize organic waste emission savings. Built responsive frontend in React and backend microservices in Golang. Pitched at BRICS IIC 2026.',
-    github: 'https://github.com/jenni-gwen/carbonis',
-    demo: 'https://carbonis-demo.example.com', // Active/Demo
-    youtube: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    skills: ['Golang', 'React', 'System Architecture', 'Sustainability Tech', 'Financial Logic']
+    description: 'Served as the Business Lead & Strategist for Carbonis, a carbon credit exchange and MRV platform for landfills (TPA). Managed business prospects, designed the franchise model (with integrated waste processing machinery), and computed investment returns alongside team members Andrian Raihannudin, Salzabilla Putri Hambali, Calista Azzahira Rusdy, and Vallerie Anne Jose. Pitched at BRICS IIC 2026, the platform utilizes Polygon L2 blockchain and Solidity escrow contracts to connect TPAs with carbon-emitting buyers.',
+    github: 'https://github.com/reihannudin24/BRICS-Submission-Ceberus.git',
+    demo: 'https://carbonis-brics.vercel.app',
+    youtube: 'https://www.youtube.com/embed/lu5s_5h_ovE',
+    skills: ['Solidity', 'Polygon L2', 'Escrow Contracts', 'Sustainability Tech', 'Financial Modeling', 'Business Strategy', 'Pitching']
   },
   {
     id: 'photobooth',
