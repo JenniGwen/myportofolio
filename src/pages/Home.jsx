@@ -97,13 +97,7 @@ export default function Home({ setCurrentPage }) {
         justifyContent: 'center',
         minHeight: '85vh',
       }}>
-        <div className="container" style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: '48px'
-        }}>
+        <div className="container hero-container">
           {/* Hero Left: Glass Card */}
           <div className="glass-card" style={{
             flex: '1 1 500px',
@@ -113,7 +107,7 @@ export default function Home({ setCurrentPage }) {
             border: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
             <span style={{
-              color: 'var(--accent-purple)',
+              color: 'white',
               fontWeight: '700',
               fontSize: '1rem',
               textTransform: 'uppercase',
