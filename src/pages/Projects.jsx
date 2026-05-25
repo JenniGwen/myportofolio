@@ -29,17 +29,17 @@ export const projectsData = [
     skills: ['Solidity', 'Polygon L2', 'Escrow Contracts', 'Sustainability Tech', 'Financial Modeling', 'Business Strategy', 'Pitching']
   },
   {
-    id: 'photobooth',
-    title: 'Photoboothique',
-    tagline: 'Desktop Photobooth Web Application',
-    category: 'Full-stack Web',
-    icon: Code,
-    image: '/photoboothique.png',
-    description: 'A web application developed for the Software Engineering course at BINUS University in a team with Fairy Yumi Ranita and Jiovanny Lim. Served as the Project Manager leading the development lifecycle according to the Waterfall SDLC. Personally responsible for designing and implementing the database schema for image storage, integrating Cloudinary for media gallery management, and configuring the QR code generation module for instant photo retrieval.',
-    github: 'https://github.com/mojiotoo/photoboothique',
+    id: 'hydrion',
+    title: 'Hydrion',
+    tagline: 'IoT + AI River Garbage Cleaner',
+    category: 'IoT / Embedded Systems',
+    icon: Cpu,
+    image: '/hydrogel.png',
+    description: 'Served as the AI Engineer for Hydrion, an IoT and AI-powered river waste cleaner recognized as a Top 10 Finalist in the Samsung Solve for Tomorrow Competition Indonesia 2025. Built in a team with Jiovanny Lim and Aviel Aquino, I custom-trained YOLO models to detect and classify organic versus non-organic river trash in real-time. Collaborated on designing the hardware and communication infrastructure using Arduino, C, and MQTT protocols to coordinate autonomous cleanup actions.',
+    github: 'https://github.com/JenniGwen/HYDROGEL-SFT-SEMIFINAL',
     demo: null,
-    youtube: null,
-    skills: ['Laravel', 'PHP', 'MySQL', 'Cloudinary', 'QR Code Generation', 'Waterfall SDLC', 'Project Management']
+    youtube: 'https://www.youtube.com/embed/NXhRq9ddb_A',
+    skills: ['YOLO', 'Computer Vision', 'IoT', 'Arduino', 'C', 'MQTT', 'Deep Learning']
   },
   {
     id: 'sentisa',
@@ -55,17 +55,17 @@ export const projectsData = [
     skills: ['XLM-RoBERTa', 'Aspect-Based Sentiment Analysis', 'Transformers', 'WhatsApp API', 'Python', 'Business Strategy']
   },
   {
-    id: 'hydrion',
-    title: 'Hydrion',
-    tagline: 'IoT + AI River Garbage Cleaner',
-    category: 'IoT / Embedded Systems',
-    icon: Cpu,
-    image: '/hydrogel.png',
-    description: 'Served as the AI Engineer for Hydrion, an IoT and AI-powered river waste cleaner recognized as a Top 10 Finalist in the Samsung Solve for Tomorrow Competition Indonesia 2025. Built in a team with Jiovanny Lim and Aviel Aquino, I custom-trained YOLO models to detect and classify organic versus non-organic river trash in real-time. Collaborated on designing the hardware and communication infrastructure using Arduino, C, and MQTT protocols to coordinate autonomous cleanup actions.',
-    github: 'https://github.com/JenniGwen/HYDROGEL-SFT-SEMIFINAL',
+    id: 'photobooth',
+    title: 'Photoboothique',
+    tagline: 'Desktop Photobooth Web Application',
+    category: 'Full-stack Web',
+    icon: Code,
+    image: '/photoboothique.png',
+    description: 'A web application developed for the Software Engineering course at BINUS University in a team with Fairy Yumi Ranita and Jiovanny Lim. Served as the Project Manager leading the development lifecycle according to the Waterfall SDLC. Personally responsible for designing and implementing the database schema for image storage, integrating Cloudinary for media gallery management, and configuring the QR code generation module for instant photo retrieval.',
+    github: 'https://github.com/mojiotoo/photoboothique',
     demo: null,
-    youtube: 'https://www.youtube.com/embed/NXhRq9ddb_A',
-    skills: ['YOLO', 'Computer Vision', 'IoT', 'Arduino', 'C', 'MQTT', 'Deep Learning']
+    youtube: null,
+    skills: ['Laravel', 'PHP', 'MySQL', 'Cloudinary', 'QR Code Generation', 'Waterfall SDLC', 'Project Management']
   },
   {
     id: 'dermaai',
