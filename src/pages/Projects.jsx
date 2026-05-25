@@ -60,12 +60,12 @@ export const projectsData = [
     tagline: 'IoT + AI River Garbage Cleaner',
     category: 'IoT / Embedded Systems',
     icon: Cpu,
-    image: '/public/Whole page (1).png', // Can fallback to unsplash but let's use the local asset or custom visual
-    description: 'IoT + AI based garbage cleaner in rivers. Developed and trained embedded deep learning models to detect waste items in real-time streams and filter floating trash. Recognized as a Top 10 finalist in Samsung Solve for Tomorrow 2025.',
-    github: 'https://github.com/jenni-gwen/hydrion',
+    image: '/public/Whole page (1).png',
+    description: 'Served as the AI Engineer for Hydrion, an IoT and AI-powered river waste cleaner recognized as a Top 10 Finalist in the Samsung Solve for Tomorrow Competition Indonesia 2025. Built in a team with Jiovanny Lim and Aviel Aquino, I custom-trained YOLO models to detect and classify organic versus non-organic river trash in real-time. Collaborated on designing the hardware and communication infrastructure using Arduino, C, and MQTT protocols to coordinate autonomous cleanup actions.',
+    github: 'https://github.com/JenniGwen/HYDROGEL-SFT-SEMIFINAL',
     demo: null,
-    youtube: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    skills: ['IoT', 'Embedded AI', 'Sensors', 'Hardware Prototyping', 'Deep Learning']
+    youtube: 'https://www.youtube.com/embed/NXhRq9ddb_A',
+    skills: ['YOLO', 'Computer Vision', 'IoT', 'Arduino', 'C', 'MQTT', 'Deep Learning']
   },
   {
     id: 'shipdeckk',
