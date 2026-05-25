@@ -184,7 +184,7 @@ export default function Home({ setCurrentPage }) {
                 left: '0',
                 width: '60px',
                 height: '4px',
-                background: 'linear-gradient(135deg, var(--accent-fuchsia), var(--accent-indigo))',
+                background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))',
                 borderRadius: '2px'
               }}></span>
             </h2>
@@ -205,7 +205,7 @@ export default function Home({ setCurrentPage }) {
                 left: '0',
                 width: '60px',
                 height: '4px',
-                background: 'linear-gradient(135deg, var(--accent-fuchsia), var(--accent-indigo))',
+                background: 'linear-gradient(135deg, var(--accent-pink), var(--accent-yellow))',
                 borderRadius: '2px'
               }}></span>
             </h2>
@@ -217,18 +217,18 @@ export default function Home({ setCurrentPage }) {
                     width: '40px',
                     height: '40px',
                     borderRadius: '50%',
-                    background: 'rgba(129, 140, 248, 0.1)',
+                    background: 'rgba(236, 72, 153, 0.1)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'var(--accent-indigo)',
+                    color: 'var(--accent-pink)',
                     flexShrink: 0
                   }}>
                     <GraduationCap size={20} />
                   </div>
                   <div>
                     <h3 style={{ fontSize: '1.25rem', color: 'white', fontWeight: '600' }}>{edu.school}</h3>
-                    <p style={{ color: 'var(--accent-purple)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.degree}</p>
+                    <p style={{ color: 'var(--accent-yellow)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.degree}</p>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: '4px 0' }}>{edu.duration}</p>
                     <p style={{ color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.details}</p>
                   </div>
@@ -264,7 +264,7 @@ export default function Home({ setCurrentPage }) {
                 style={{
                   textTransform: 'capitalize',
                   border: 'none',
-                  background: activeTab === tab ? 'linear-gradient(135deg, #c084fc 0%, #ec4899 100%)' : 'rgba(255, 255, 255, 0.05)',
+                  background: activeTab === tab ? 'linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-yellow) 100%)' : 'rgba(255, 255, 255, 0.05)',
                   color: activeTab === tab ? 'white' : 'var(--text-secondary)'
                 }}
               >
@@ -283,11 +283,11 @@ export default function Home({ setCurrentPage }) {
                     width: '48px',
                     height: '48px',
                     borderRadius: '12px',
-                    background: 'rgba(192, 132, 252, 0.1)',
+                    background: 'rgba(236, 72, 153, 0.1)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'var(--accent-purple)',
+                    color: 'var(--accent-pink)',
                     marginBottom: '20px'
                   }}>
                     <IconComponent size={24} />
@@ -385,11 +385,11 @@ export default function Home({ setCurrentPage }) {
                     width: '36px',
                     height: '36px',
                     borderRadius: '50%',
-                    background: 'rgba(240, 171, 252, 0.1)',
+                    background: 'rgba(236, 72, 153, 0.1)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'var(--accent-purple)',
+                    color: 'var(--accent-pink)',
                     flexShrink: 0
                   }}>
                     <Award size={18} />
@@ -397,7 +397,7 @@ export default function Home({ setCurrentPage }) {
                   <div>
                     <h4 style={{ color: 'white', fontSize: '1.05rem', fontWeight: '600' }}>{award.title}</h4>
                     {award.issuer && <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>{award.issuer}</p>}
-                    <p style={{ color: 'var(--accent-indigo)', fontSize: '0.85rem', fontWeight: '500', marginTop: '2px' }}>{award.year}</p>
+                    <p style={{ color: 'var(--accent-yellow)', fontSize: '0.85rem', fontWeight: '500', marginTop: '2px' }}>{award.year}</p>
                   </div>
                 </div>
               ))}
