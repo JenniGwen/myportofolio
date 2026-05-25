@@ -132,7 +132,7 @@ export default function Home({ setCurrentPage }) {
               lineHeight: '1.7',
               marginBottom: '32px'
             }}>
-              A Computer Science student at BINUS University specializing in Data Analytics & AI. AI researcher, full-stack developer, and Vice President of Ureeka BINUS.
+              A Computer Science student at BINUS University specializing in AI and Software Engineering, but also passionate about Data Analytics and Finance. AI researcher, full-stack developer, and Vice President of Ureeka BINUS.
             </p>
             <button 
               onClick={() => setCurrentPage('projects')}
