@@ -6,15 +6,16 @@
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   
-  /* Yellow and Pink Accent Colors */
-  --accent-pink: #ec4899;
-  --accent-pink-hover: #db2777;
-  --accent-yellow: #f59e0b;
-  --accent-yellow-light: #fef08a;
+  /* Accent colors */
+  --accent-pink: #FFA1C5;
+  --accent-yellow: #FFFED3;
+  
+  /* Custom sequential gradient (mostly dominant in purple #6E06B4, transitioning to #FFA1C5 and #FFFED3) */
+  --accent-gradient: linear-gradient(135deg, #6E06B4 0%, #6E06B4 55%, #FFA1C5 85%, #FFFED3 100%);
   
   --glass-bg: rgba(13, 9, 29, 0.6);
   --glass-border: rgba(255, 255, 255, 0.07);
-  --glass-border-glow: rgba(245, 158, 11, 0.25);
+  --glass-border-glow: rgba(110, 6, 180, 0.3);
   
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-heading: 'Outfit', system-ui, sans-serif;
@@ -35,8 +36,8 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.06) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, rgba(110, 6, 180, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 161, 197, 0.06) 0%, transparent 40%);
 }
 
 /* Background image overrides when home is selected */
@@ -62,11 +63,11 @@ body {
   background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(245, 158, 11, 0.2);
+  background: rgba(110, 6, 180, 0.3);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(236, 72, 153, 0.4);
+  background: rgba(255, 161, 197, 0.5);
 }
 
 /* Typography */
@@ -129,9 +130,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link.active {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-yellow) 100%);
+  background: var(--accent-gradient);
   color: white;
-  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.35);
+  box-shadow: 0 4px 15px rgba(110, 6, 180, 0.35);
 }
 
 /* Glassmorphism Cards */
@@ -147,19 +148,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .glass-card:hover {
   border-color: var(--glass-border-glow);
-  box-shadow: 0 10px 40px 0 rgba(245, 158, 11, 0.15);
+  box-shadow: 0 10px 40px 0 rgba(110, 6, 180, 0.15);
   transform: translateY(-2px);
 }
 
 /* Glow Elements */
 .text-gradient {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-yellow) 100%);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .btn-gradient {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-yellow) 100%);
+  background: var(--accent-gradient);
   color: white;
   border: none;
   font-weight: 600;
@@ -171,12 +172,12 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 8px;
   transition: var(--transition-smooth);
-  box-shadow: 0 4px 14px 0 rgba(236, 72, 153, 0.3);
+  box-shadow: 0 4px 14px 0 rgba(110, 6, 180, 0.3);
 }
 
 .btn-gradient:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(236, 72, 153, 0.5);
+  box-shadow: 0 6px 20px 0 rgba(110, 6, 180, 0.5);
   filter: brightness(1.1);
 }
 
@@ -201,44 +202,24 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
-/* User Profile Image glow/halo styling - Updated to Yellow/Pink Rectangular Glow */
+/* User Profile Image glow/halo styling - Removed all borders, border-radius, shadows, and background glows as requested */
 .profile-image-wrapper {
   position: relative;
   display: inline-block;
-  border-radius: 20px;
 }
 
 .profile-image-wrapper::after {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, var(--accent-pink), var(--accent-yellow));
-  z-index: -1;
-  opacity: 0.9;
-  filter: blur(12px);
-  animation: pulseGlow 3s ease-in-out infinite alternate;
+  content: none; /* No background glows */
 }
 
 .profile-image {
   width: 380px;
   height: 480px;
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   display: block;
-}
-
-/* Utility Animations */
-@keyframes pulseGlow {
-  0% {
-    filter: blur(8px);
-    opacity: 0.7;
-  }
-  100% {
-    filter: blur(14px);
-    opacity: 1.0;
-  }
+  border-radius: 0; /* Pure original rectangular image */
+  border: none;     /* No border */
+  box-shadow: none; /* No box-shadow */
 }
 
 .animate-fade-in {
@@ -282,8 +263,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-input:focus {
   outline: none;
-  border-color: var(--accent-pink);
-  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.25);
+  border-color: #6E06B4;
+  box-shadow: 0 0 0 3px rgba(110, 6, 180, 0.25);
   background: rgba(13, 9, 29, 0.65);
 }
 
@@ -295,9 +276,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 9999px;
   font-size: 0.8rem;
   font-weight: 600;
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  color: var(--accent-yellow-light);
+  background: rgba(255, 161, 197, 0.15);
+  border: 1px solid rgba(255, 161, 197, 0.25);
+  color: #FFA1C5;
 }
 
 /* Custom list bullet replacement */
@@ -316,6 +297,6 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0;
   top: 0;
-  color: var(--accent-yellow);
+  color: #FFA1C5;
   font-weight: bold;
 }
