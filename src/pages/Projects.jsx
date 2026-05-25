@@ -1,0 +1,182 @@
+import React from 'react';
+import { ArrowRight, Code, Database, Cpu, Globe } from 'lucide-react';
+
+export const projectsData = [
+  {
+    id: 'deepfake-detection',
+    title: 'Deepfake Detection Pipeline Research',
+    tagline: 'AI Research for ICCSCI 2026',
+    category: 'AI / Machine Learning',
+    icon: Cpu,
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop',
+    description: 'Authored research paper "Enhancing Deepfake Detection Using SVM and Random Forest with Hybrid CNN-Frequency Features". Developed a hybrid detection pipeline combining a frozen EfficientNet-B0 backbone with frequency domain analysis to extract spectral artifacts via 2D-DFT. Achieved 81.30% accuracy on SVM classifers.',
+    github: 'https://github.com/jenni-gwen/deepfake-detection',
+    demo: null,
+    youtube: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder
+    skills: ['PyTorch', 'EfficientNet-B0', 'OpenCV', 'SVM', '2D-DFT', 'Frequency Analysis']
+  },
+  {
+    id: 'carbonis',
+    title: 'Carbonis (Sustainability Tech)',
+    tagline: 'Carbon Credit Exchange Platform',
+    category: 'Full-stack & Architecture',
+    icon: Globe,
+    image: 'https://images.unsplash.com/photo-1506069673806-3c4516395012?q=80&w=600&auto=format&fit=crop',
+    description: 'Led the strategic development and system architecture of Carbonis, a carbon credit exchange platform enabling waste management sites (TPA) to monetize organic waste emission savings. Built responsive frontend in React and backend microservices in Golang. Pitched at BRICS IIC 2026.',
+    github: 'https://github.com/jenni-gwen/carbonis',
+    demo: 'https://carbonis-demo.example.com', // Active/Demo
+    youtube: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    skills: ['Golang', 'React', 'System Architecture', 'Sustainability Tech', 'Financial Logic']
+  },
+  {
+    id: 'photobooth',
+    title: 'Desktop Photobooth Web Application',
+    tagline: 'High-performance Photobooth SDLC',
+    category: 'Full-stack Web',
+    icon: Code,
+    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=600&auto=format&fit=crop',
+    description: 'Project manager and lead developer building a high-performance photobooth web application using the Laravel framework. Managed the full software development lifecycle (SDLC) from requirement gathering, database schema design to responsive interface implementation.',
+    github: 'https://github.com/jenni-gwen/desktop-photobooth',
+    demo: null, // In progress
+    youtube: null,
+    skills: ['Laravel', 'PHP', 'MySQL', 'Database Design', 'SDLC', 'Responsive UI']
+  },
+  {
+    id: 'umkm-feedback',
+    title: 'AI Chatbot for UMKM Feedback',
+    tagline: 'Sentiment Analysis & Messaging APIs',
+    category: 'NLP & AI Chatbot',
+    icon: Database,
+    image: 'https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=600&auto=format&fit=crop',
+    description: 'Built an AI-integrated chatbot bridging buyer feedback from WhatsApp directly to the seller\'s analytics dashboard. Implemented Sentiment Analysis using transformer models (XML-RoBERTa, IndoBERTweet, IndoRoBERTa) to classify customer reviews into actionable business insights.',
+    github: 'https://github.com/jenni-gwen/umkm-feedback-chatbot',
+    demo: 'https://chatbot-umkm.example.com',
+    youtube: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    skills: ['Transformers', 'XML-RoBERTa', 'Sentiment Analysis', 'WhatsApp API', 'Python']
+  },
+  {
+    id: 'hydrion',
+    title: 'Hydrion',
+    tagline: 'IoT + AI River Garbage Cleaner',
+    category: 'IoT / Embedded Systems',
+    icon: Cpu,
+    image: '/public/Whole page (1).png', // Can fallback to unsplash but let's use the local asset or custom visual
+    description: 'IoT + AI based garbage cleaner in rivers. Developed and trained embedded deep learning models to detect waste items in real-time streams and filter floating trash. Recognized as a Top 10 finalist in Samsung Solve for Tomorrow 2025.',
+    github: 'https://github.com/jenni-gwen/hydrion',
+    demo: null,
+    youtube: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    skills: ['IoT', 'Embedded AI', 'Sensors', 'Hardware Prototyping', 'Deep Learning']
+  },
+  {
+    id: 'shipdeckk',
+    title: 'ShipDecKK',
+    tagline: 'Interactive Shipping Exhibition',
+    category: 'Frontend Web',
+    icon: Code,
+    image: 'https://images.unsplash.com/photo-1505242844900-a50e1ef0e8b0?q=80&w=600&auto=format&fit=crop',
+    description: 'ShipDecKK is an interactive web showcase built using HTML, CSS, and vanilla Javascript. Features rich layouts and high-performance transitions for users to explore different ship models and specs.',
+    github: 'https://github.com/jenni-gwen/shipdeckk',
+    demo: 'https://shipdeckk.example.com',
+    youtube: null,
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'DOM Manipulation', 'Web Performance']
+  }
+];
+
+export default function Projects({ setCurrentPage, setSelectedProjectId }) {
+  
+  const handleViewDetails = (id) => {
+    setSelectedProjectId(id);
+    setCurrentPage('project-detail');
+  };
+
+  return (
+    <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh' }}>
+      <div className="container">
+        <h1 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '16px' }}>
+          My <span className="text-gradient">Technical Projects</span>
+        </h1>
+        <p style={{ color: 'var(--text-secondary)', textAlign: 'center', maxWidth: '600px', margin: '0 auto 56px', fontSize: '1.05rem' }}>
+          Explore my academic research, full-stack applications, and award-winning IoT AI prototypes. Click on any project card to see its full breakdown and demo.
+        </p>
+
+        <div className="grid-responsive">
+          {projectsData.map((project) => {
+            const IconComponent = project.icon;
+            return (
+              <div 
+                key={project.id} 
+                className="glass-card" 
+                style={{ 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  height: '100%',
+                  overflow: 'hidden'
+                }}
+              >
+                {/* Image top */}
+                <div className="project-image-container" style={{ margin: '16px', marginBottom: '0' }}>
+                  <img 
+                    src={project.image.startsWith('/public') ? project.image.replace('/public', '') : project.image} 
+                    alt={project.title} 
+                    onError={(e) => {
+                      // Fallback image in case the local image isn't available
+                      e.target.src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop';
+                    }}
+                  />
+                  <div style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '12px',
+                    zIndex: 2
+                  }}>
+                    <span className="badge" style={{ background: 'rgba(15, 11, 36, 0.85)', backdropFilter: 'blur(4px)' }}>
+                      {project.category}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Details */}
+                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flexGrow: 1, textAlign: 'left' }}>
+                  <h3 style={{ fontSize: '1.3rem', color: 'white', marginBottom: '8px' }}>{project.title}</h3>
+                  <p style={{ color: 'var(--accent-purple)', fontSize: '0.85rem', fontWeight: '600', marginBottom: '16px' }}>
+                    {project.tagline}
+                  </p>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '24px', flexGrow: 1, lineHeight: '1.6' }}>
+                    {project.description.slice(0, 140)}...
+                  </p>
+
+                  {/* Skills tags */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '24px' }}>
+                    {project.skills.slice(0, 3).map((skill, sIdx) => (
+                      <span key={sIdx} className="badge" style={{ fontSize: '0.75rem', padding: '2px 8px' }}>
+                        {skill}
+                      </span>
+                    ))}
+                    {project.skills.length > 3 && (
+                      <span className="badge" style={{ fontSize: '0.75rem', padding: '2px 8px', background: 'rgba(255,255,255,0.05)', color: 'white' }}>
+                        +{project.skills.length - 3} more
+                      </span>
+                    )}
+                  </div>
+
+                  <button
+                    onClick={() => handleViewDetails(project.id)}
+                    className="btn-gradient"
+                    style={{
+                      width: '100%',
+                      justifyContent: 'center',
+                      padding: '10px 20px',
+                      fontSize: '0.9rem'
+                    }}
+                  >
+                    View Details <ArrowRight size={16} />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
