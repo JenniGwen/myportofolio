@@ -47,7 +47,7 @@ export const projectsData = [
     tagline: 'AI Sentiment Analysis for UMKM',
     category: 'NLP & AI Chatbot',
     icon: Database,
-    image: 'https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=600&auto=format&fit=crop',
+    image: '/sentisa.png',
     description: 'An AI-powered real-time sentiment analysis dashboard named Sentisa, built for the Gunadarma Code Week Competition 2026 in a team with Jiovanny Lim, Aviel Aquino, and Andrian Raihannudin. Served as both the Lead AI Engineer and Business Strategist (Hustler). Integrated WhatsApp Business API buyer feedback with a seller dashboard, using Aspect-Based Sentiment Analysis (ABSA) to drive strategic decisions. Trained and optimized several transformer models including IndoBERTweet, IndoRoBERTa, and custom-tuned XLM-RoBERTa (which achieved the highest performance).',
     github: 'https://github.com/mojiotoo/Sentisa',
     demo: null,
