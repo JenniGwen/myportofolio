@@ -19,18 +19,47 @@ export const activitiesData = [
     ]
   },
   {
-    id: 'aiesec-binus',
-    title: 'AIESEC in BINUS',
-    subtitle: 'Project Controller & Vice President of Finance',
-    role: 'OCVP Finance & Project Controller',
+    id: 'aiesec-pc',
+    title: 'AIESEC in BINUS (Project Controller)',
+    subtitle: 'Team Member of Project Controller',
+    role: 'Team Member of Project Controller',
     duration: 'Feb 2025 - Jan 2026',
+    icon: Shield,
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop',
+    points: [
+      'Tracked and monitored 10+ concurrent projects, ensuring compliance with AIESEC and BINUS policies.',
+      'Led end-to-end planning and execution for core initiatives including Global Village, Local Conference, and Youth Career Compass.',
+      'Collaborated closely with Executive Boards to optimize schedules, manage project resources, and align deliverables.'
+    ]
+  },
+  {
+    id: 'aiesec-ytja',
+    title: 'AIESEC in BINUS (YT x JA)',
+    subtitle: 'OCVP Finance of Youth Today x Join AIESEC',
+    role: 'Organizing Committee VP of Finance',
+    duration: 'July 2025 - Sep 2025',
+    icon: Shield,
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop',
+    points: [
+      'Developed and executed budget plans, monitored expenses, and ensured cost efficiency for large-scale promotional events.',
+      'Oversaw financial communications, processed and audited 800+ transactions in a single month, and optimized workflows.',
+      'Trained finance team members on standard procedures, financial compliance, and delegated responsibilities effectively.',
+      'Produced accurate, audit-ready financial reports and maintained detailed digital transaction archives.'
+    ]
+  },
+  {
+    id: 'aiesec-igv',
+    title: 'AIESEC in BINUS (iGV)',
+    subtitle: 'OCVP Finance of Incoming Global Volunteer',
+    role: 'Organizing Committee VP of Finance',
+    duration: 'Mar 2025 - Aug 2025',
     icon: Shield,
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop',
     points: [
-      'Organizing Committee Vice President of Finance for Youth Today x Join AIESEC (July 2025 - Sep 2025): Spearheaded budgeting and expenditures for large-scale events, audited 800+ monthly invoices, trained teams on compliance, and drafted audit-ready reports.',
-      'Organizing Committee Vice President of Finance for Incoming Global Volunteer (Mar 2025 - Aug 2025): Administered budgets under AIESEC Indonesia\'s 70/30 framework, authorized disbursements, and prepared transparent financial statements.',
-      'Project Controller Team Member (Feb 2025 - Jan 2026): Tracked and monitored 10+ concurrent projects to ensure alignment with AIESEC and BINUS compliance regulations.',
-      'Collaborated closely with executive boards and cross-functional teams to optimize schedules, manage resources, and deliver impactful community programs.'
+      'Designed and managed incoming volunteer program budgets in alignment with AIESEC Indonesia\'s 70/30 financial framework.',
+      'Controlled departmental spending, authorized reimbursements, and verified exchange transactions to maintain absolute accuracy.',
+      'Trained finance teams and collaborated with other operational divisions to ensure seamless and compliant financial operations.',
+      'Compiled comprehensive financial statements and archived detailed transaction records for internal audit procedures.'
     ]
   },
   {
