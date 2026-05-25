@@ -42,17 +42,17 @@ export const projectsData = [
     skills: ['Laravel', 'PHP', 'MySQL', 'Cloudinary', 'QR Code Generation', 'Waterfall SDLC', 'Project Management']
   },
   {
-    id: 'umkm-feedback',
-    title: 'AI Chatbot for UMKM Feedback',
-    tagline: 'Sentiment Analysis & Messaging APIs',
+    id: 'sentisa',
+    title: 'Sentisa',
+    tagline: 'AI Sentiment Analysis for UMKM',
     category: 'NLP & AI Chatbot',
     icon: Database,
     image: 'https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=600&auto=format&fit=crop',
-    description: 'Built an AI-integrated chatbot bridging buyer feedback from WhatsApp directly to the seller\'s analytics dashboard. Implemented Sentiment Analysis using transformer models (XML-RoBERTa, IndoBERTweet, IndoRoBERTa) to classify customer reviews into actionable business insights.',
-    github: 'https://github.com/jenni-gwen/umkm-feedback-chatbot',
-    demo: 'https://chatbot-umkm.example.com',
-    youtube: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    skills: ['Transformers', 'XML-RoBERTa', 'Sentiment Analysis', 'WhatsApp API', 'Python']
+    description: 'An AI-powered real-time sentiment analysis dashboard named Sentisa, built for the Gunadarma Code Week Competition 2026 in a team with Jiovanny Lim, Aviel Aquino, and Andrian Raihannudin. Served as both the Lead AI Engineer and Business Strategist (Hustler). Integrated WhatsApp Business API buyer feedback with a seller dashboard, using Aspect-Based Sentiment Analysis (ABSA) to drive strategic decisions. Trained and optimized several transformer models including IndoBERTweet, IndoRoBERTa, and custom-tuned XLM-RoBERTa (which achieved the highest performance).',
+    github: 'https://github.com/mojiotoo/Sentisa',
+    demo: null,
+    youtube: null,
+    skills: ['XLM-RoBERTa', 'Aspect-Based Sentiment Analysis', 'Transformers', 'WhatsApp API', 'Python', 'Business Strategy']
   },
   {
     id: 'hydrion',
