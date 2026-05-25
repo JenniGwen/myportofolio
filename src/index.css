@@ -250,11 +250,18 @@ h1, h2, h3, h4, h5, h6 {
   gap: 28px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero-container {
     flex-direction: column-reverse; /* image on top, description on bottom */
     gap: 32px;
   }
+  .profile-image {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
   .grid-responsive {
     grid-template-columns: 1fr;
   }
