@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link.active {
   background: linear-gradient(135deg, var(--btn-purple) 0%, var(--btn-pink) 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 4px 12px -2px rgba(124, 58, 237, 0.25);
 }
 
 /* Glassmorphism Cards */
@@ -161,9 +161,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card:hover {
-  border-color: var(--glass-border-glow);
-  box-shadow: 0 10px 40px 0 rgba(124, 58, 237, 0.25);
-  transform: translateY(-2px);
+  border-color: rgba(192, 132, 252, 0.22);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.4), 0 0 16px 1px rgba(124, 58, 237, 0.08);
+  transform: translateY(-3px);
 }
 
 /* Glow Elements */
@@ -186,13 +186,13 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 8px;
   transition: var(--transition-smooth);
-  box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 12px -2px rgba(124, 58, 237, 0.20);
 }
 
 .btn-gradient:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(124, 58, 237, 0.5);
-  filter: brightness(1.1);
+  box-shadow: 0 6px 16px -3px rgba(124, 58, 237, 0.35), 0 0 8px 1px rgba(244, 114, 182, 0.15);
+  filter: brightness(1.08);
 }
 
 /* Project & Activity Custom Styling */
@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
   border-radius: 50%; /* Clean circular format */
   border: 4px solid rgba(255, 255, 255, 0.25); /* Whitish glass border */
-  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.35); /* Subtle purple drop shadow glow */
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 20px 2px rgba(124, 58, 237, 0.18); /* Subtle purple drop shadow glow */
   display: block;
 }
 
@@ -318,6 +318,12 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-left: 24px;
   margin-bottom: 12px;
+  transition: var(--transition-smooth);
+}
+
+.custom-list li:hover {
+  transform: translateX(4px);
+  color: var(--text-primary);
 }
 
 .custom-list li::before {
