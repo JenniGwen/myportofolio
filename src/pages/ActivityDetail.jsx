@@ -1,16 +1,9 @@
 import { useState } from 'react';
-import { ArrowLeft, Upload, Edit3, Save, Image, List, Maximize2 } from 'lucide-react';
+import { ArrowLeft, Image, List, Maximize2 } from 'lucide-react';
 import { activitiesData } from './Activities';
 
 export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
   const activity = activitiesData.find((a) => a.id === selectedActivityId);
-
-  // State to hold local description and uploaded images
-  const [uploadedImages, setUploadedImages] = useState([]);
-  const [customExplanation, setCustomExplanation] = useState(
-    activity ? (activity.description || activity.points.join('\n\n')) : ''
-  );
-  const [isEditing, setIsEditing] = useState(false);
 
   // Gallery state
   const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -22,9 +15,6 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
   if (selectedActivityId !== lastActivityId) {
     setLastActivityId(selectedActivityId);
     setActiveImageIndex(0);
-    setUploadedImages([]);
-    setCustomExplanation(activity ? (activity.description || activity.points.join('\n\n')) : '');
-    setIsEditing(false);
   }
 
   if (!activity) {
@@ -38,41 +28,9 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
     );
   }
 
-  // Combine predefined subpage images with custom uploads
-  const allImages = [
-    ...(activity.subpageImages || []),
-    ...uploadedImages.map(img => img.url)
-  ];
-
-  // Handle Image Upload
-  const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
-    
-    // Limit to 2 images
-    const currentLimit = 2 - uploadedImages.length;
-    if (files.length > currentLimit) {
-      alert(`You can only upload up to 2 images. ${currentLimit} remaining slots.`);
-    }
-
-    const newImages = files.slice(0, currentLimit).map(file => ({
-      name: file.name,
-      url: URL.createObjectURL(file)
-    }));
-
-    setUploadedImages([...uploadedImages, ...newImages]);
-  };
-
-  // Remove uploaded image
-  const handleRemoveImage = (index) => {
-    const newImages = [...uploadedImages];
-    // Free the object URL memory
-    URL.revokeObjectURL(newImages[index].url);
-    newImages.splice(index, 1);
-    setUploadedImages(newImages);
-    
-    // Reset active image index to a safe value
-    setActiveImageIndex(0);
-  };
+  // Predefined subpage images list
+  const allImages = activity.subpageImages || [];
+  const explanationText = activity.description || activity.points.join('\n\n');
 
   return (
     <div className="animate-fade-in" style={{ padding: '60px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh' }}>
@@ -177,9 +135,8 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
 
               {/* Thumbnails Row */}
               {allImages.length > 0 && (
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {allImages.map((img, idx) => {
-                    const isPredefined = idx < (activity.subpageImages?.length || 0);
                     const isSelected = idx === activeImageIndex;
                     return (
                       <div 
@@ -202,186 +159,66 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
                           alt={`Thumbnail ${idx + 1}`}
                           style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                         />
-                        {!isPredefined && (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleRemoveImage(idx - (activity.subpageImages?.length || 0));
-                            }}
-                            style={{
-                              position: 'absolute',
-                              top: '2px',
-                              right: '2px',
-                              background: 'rgba(239, 68, 68, 0.95)',
-                              border: 'none',
-                              borderRadius: '50%',
-                              width: '16px',
-                              height: '16px',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              color: 'white',
-                              cursor: 'pointer',
-                              padding: 0
-                            }}
-                          >
-                            <span style={{ fontSize: '9px', fontWeight: 'bold', transform: 'translateY(-0.5px)' }}>×</span>
-                          </button>
-                        )}
                       </div>
                     );
                   })}
                 </div>
               )}
-
-              {/* Upload Custom Images */}
-              <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '20px' }}>
-                <h4 style={{ fontSize: '0.95rem', color: 'white', marginBottom: '4px' }}>Add Custom Images</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.75rem', marginBottom: '12px' }}>
-                  Upload up to 2 additional images.
-                </p>
-
-                {uploadedImages.length < 2 ? (
-                  <div style={{
-                    border: '2px dashed rgba(192, 132, 252, 0.3)',
-                    borderRadius: '8px',
-                    padding: '16px',
-                    textAlign: 'center',
-                    background: 'rgba(192, 132, 252, 0.01)',
-                    cursor: 'pointer',
-                    position: 'relative',
-                    transition: 'var(--transition-smooth)'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--accent-purple)'}
-                  onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(192, 132, 252, 0.3)'}
-                  >
-                    <input
-                      type="file"
-                      accept="image/*"
-                      multiple
-                      onChange={handleImageChange}
-                      style={{
-                        position: 'absolute',
-                        inset: 0,
-                        width: '100%',
-                        height: '100%',
-                        opacity: 0,
-                        cursor: 'pointer'
-                      }}
-                    />
-                    <Upload size={20} style={{ color: 'var(--accent-purple)', marginBottom: '4px', margin: '0 auto' }} />
-                    <p style={{ color: 'white', fontSize: '0.8rem', fontWeight: '600' }}>Choose Files</p>
-                  </div>
-                ) : (
-                  <div style={{
-                    padding: '8px',
-                    borderRadius: '8px',
-                    background: 'rgba(129, 140, 248, 0.1)',
-                    color: 'var(--accent-indigo)',
-                    fontSize: '0.8rem',
-                    fontWeight: '600',
-                    textAlign: 'center'
-                  }}>
-                    Custom upload slots filled (2/2)
-                  </div>
-                )}
-              </div>
             </div>
           </div>
 
-          {/* Right Column: Custom Explanation Editor & Viewer */}
+          {/* Right Column: Explanation & Notes */}
           <div style={{ flex: '1 1 450px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
             <div className="glass-card" style={{ padding: '36px' }}>
               <div style={{
                 display: 'flex',
-                justifyContent: 'space-between',
                 alignItems: 'center',
                 marginBottom: '24px'
               }}>
                 <h3 style={{ fontSize: '1.25rem', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <List size={18} className="text-purple-400" /> Explanation & Notes
                 </h3>
-                <button
-                  onClick={() => setIsEditing(!isEditing)}
-                  className="btn-gradient"
-                  style={{
-                    padding: '6px 14px',
-                    fontSize: '0.8rem',
-                    background: isEditing ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)' : 'rgba(255, 255, 255, 0.05)',
-                    border: isEditing ? 'none' : '1px solid rgba(255, 255, 255, 0.1)',
-                    boxShadow: 'none',
-                    color: 'white'
-                  }}
-                >
-                  {isEditing ? (
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}><Save size={12} /> Save</span>
-                  ) : (
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}><Edit3 size={12} /> Edit Text</span>
-                  )}
-                </button>
               </div>
 
-              {isEditing ? (
-                <div>
-                  <textarea
-                    value={customExplanation}
-                    onChange={(e) => setCustomExplanation(e.target.value)}
-                    className="form-input"
-                    rows={12}
-                    style={{
-                      resize: 'vertical',
-                      fontSize: '0.95rem',
-                      lineHeight: '1.6',
-                      background: 'rgba(0, 0, 0, 0.35)',
-                      fontFamily: 'var(--font-sans)'
-                    }}
-                    placeholder="Explain what the activity is about..."
-                  />
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.75rem', marginTop: '8px' }}>
-                    Tip: Separate points or paragraphs with empty lines.
-                  </p>
-                </div>
-              ) : (
-                <div style={{ fontSize: '1.05rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
-                  {customExplanation.split('\n').map((line, lineIdx) => {
-                    const trimmed = line.trim();
-                    if (!trimmed) {
-                      return <div key={lineIdx} style={{ height: '12px' }} />;
-                    }
-                    
-                    // Check if it's a bullet point
-                    if (trimmed.startsWith('-') || trimmed.startsWith('●') || trimmed.startsWith('•') || trimmed.startsWith('*')) {
-                      const text = trimmed.replace(/^[-●•*]\s*/, '');
-                      return (
-                        <span key={lineIdx} style={{ display: 'block', paddingLeft: '18px', position: 'relative', marginBottom: '8px' }}>
-                          <span style={{ position: 'absolute', left: 0, color: 'var(--accent-purple)' }}>✦</span>
-                          {text}
-                        </span>
-                      );
-                    }
-                    
-                    // Check if it's a numbered list item
-                    const matchNumber = trimmed.match(/^(\d+)\.\s*(.*)/);
-                    if (matchNumber) {
-                      const num = matchNumber[1];
-                      const text = matchNumber[2];
-                      return (
-                        <span key={lineIdx} style={{ display: 'block', paddingLeft: '22px', position: 'relative', marginBottom: '8px' }}>
-                          <span style={{ position: 'absolute', left: 0, color: 'var(--accent-purple)', fontWeight: 'bold' }}>{num}.</span>
-                          {text}
-                        </span>
-                      );
-                    }
-                    
-                    // Regular paragraph
+              <div style={{ fontSize: '1.05rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                {explanationText.split('\n').map((line, lineIdx) => {
+                  const trimmed = line.trim();
+                  if (!trimmed) {
+                    return <div key={lineIdx} style={{ height: '12px' }} />;
+                  }
+                  
+                  // Check if it's a bullet point
+                  if (trimmed.startsWith('-') || trimmed.startsWith('●') || trimmed.startsWith('•') || trimmed.startsWith('*')) {
+                    const text = trimmed.replace(/^[-●•*]\s*/, '');
                     return (
-                      <p key={lineIdx} style={{ marginBottom: '16px' }}>
-                        {line}
-                      </p>
+                      <span key={lineIdx} style={{ display: 'block', paddingLeft: '18px', position: 'relative', marginBottom: '8px' }}>
+                        <span style={{ position: 'absolute', left: 0, color: 'var(--accent-purple)' }}>✦</span>
+                        {text}
+                      </span>
                     );
-                  })}
-                </div>
-              )}
+                  }
+                  
+                  // Check if it's a numbered list item
+                  const matchNumber = trimmed.match(/^(\d+)\.\s*(.*)/);
+                  if (matchNumber) {
+                    const num = matchNumber[1];
+                    const text = matchNumber[2];
+                    return (
+                      <span key={lineIdx} style={{ display: 'block', paddingLeft: '22px', position: 'relative', marginBottom: '8px' }}>
+                        <span style={{ position: 'absolute', left: 0, color: 'var(--accent-purple)', fontWeight: 'bold' }}>{num}.</span>
+                        {text}
+                      </span>
+                    );
+                  }
+                  
+                  // Regular paragraph
+                  return (
+                    <p key={lineIdx} style={{ marginBottom: '16px' }}>
+                      {line}
+                    </p>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

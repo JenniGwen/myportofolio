@@ -120,7 +120,7 @@ export default function Activities({ setCurrentPage, setSelectedActivityId }) {
           My <span className="text-gradient">Activities & Organizations</span>
         </h1>
         <p style={{ color: 'var(--text-secondary)', textAlign: 'center', maxWidth: '600px', margin: '0 auto 56px', fontSize: '1.05rem' }}>
-          Highlighting my leadership roles, financial operations, competition involvement, and community contributions. Click on any organization to write explanations and upload pictures.
+          Highlighting my leadership roles, financial operations, competition involvement, and community contributions.
         </p>
 
         <div className="grid-responsive" style={{ gap: '32px' }}>
