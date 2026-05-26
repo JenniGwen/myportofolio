@@ -97,14 +97,7 @@ export default function Home({ setCurrentPage }) {
       }}>
         <div className="container hero-container">
           {/* Hero Left: Glass Card */}
-          <div className="glass-card" style={{
-            flex: '1 1 500px',
-            maxWidth: '620px',
-            padding: '48px',
-            textAlign: 'left',
-            boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.35)',
-            border: '1px solid rgba(255, 255, 255, 0.1)'
-          }}>
+          <div className="glass-card hero-glass-card">
             <span style={{
               color: 'white',
               fontWeight: '700',
@@ -142,12 +135,7 @@ export default function Home({ setCurrentPage }) {
           </div>
 
           {/* Hero Right: Profile Picture with Halo */}
-          <div style={{
-            flex: '0 0 auto',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
+          <div className="hero-image-container">
             <div className="profile-image-wrapper">
               <img 
                 src="/picture of me.png" 
@@ -168,7 +156,7 @@ export default function Home({ setCurrentPage }) {
           justifyContent: 'center'
         }}>
           {/* Summary Box */}
-          <div className="glass-card" style={{ flex: '1 1 500px', maxWidth: '540px', padding: '40px', textAlign: 'left' }}>
+          <div className="glass-card home-info-card">
             <h2 style={{ fontSize: '2rem', marginBottom: '24px', position: 'relative' }}>
               Summary
               <span style={{
@@ -189,7 +177,7 @@ export default function Home({ setCurrentPage }) {
           </div>
 
           {/* Education Box */}
-          <div className="glass-card" style={{ flex: '1 1 500px', maxWidth: '540px', padding: '40px', textAlign: 'left' }}>
+          <div className="glass-card home-info-card">
             <h2 style={{ fontSize: '2rem', marginBottom: '24px', position: 'relative' }}>
               Education
               <span style={{
@@ -246,14 +234,15 @@ export default function Home({ setCurrentPage }) {
           <div style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '16px',
+            flexWrap: 'wrap',
+            gap: '12px',
             marginBottom: '40px'
           }}>
             {Object.keys(skillsData).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`nav-link ${activeTab === tab ? 'active' : ''}`}
+                className={`nav-link skill-tab-btn ${activeTab === tab ? 'active' : ''}`}
                 style={{
                   textTransform: 'capitalize',
                   border: 'none',
@@ -261,7 +250,19 @@ export default function Home({ setCurrentPage }) {
                   color: activeTab === tab ? 'white' : 'var(--text-secondary)'
                 }}
               >
-                {tab === 'technical' ? 'Technical Skills' : tab === 'management' ? 'Management & Leadership' : 'Languages'}
+                {tab === 'technical' ? (
+                  <>
+                    <span className="hidden-mobile">Technical Skills</span>
+                    <span className="visible-mobile">Technical</span>
+                  </>
+                ) : tab === 'management' ? (
+                  <>
+                    <span className="hidden-mobile">Management & Leadership</span>
+                    <span className="visible-mobile">Management</span>
+                  </>
+                ) : (
+                  'Languages'
+                )}
               </button>
             ))}
           </div>

@@ -188,6 +188,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 12px -2px rgba(124, 58, 237, 0.25);
 }
 
+.nav-link.active:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px 2px rgba(124, 58, 237, 0.5), 0 0 20px 4px rgba(244, 114, 182, 0.35);
+  filter: brightness(1.08);
+}
+
 /* Glassmorphism Cards */
 .glass-card {
   background: var(--glass-bg);
@@ -230,8 +236,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-gradient:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px -3px rgba(124, 58, 237, 0.35), 0 0 8px 1px rgba(244, 114, 182, 0.15);
-  filter: brightness(1.08);
+  box-shadow: 0 0 16px 3px rgba(124, 58, 237, 0.65), 0 0 28px 6px rgba(244, 114, 182, 0.45);
+  filter: brightness(1.12);
 }
 
 /* Project & Activity Custom Styling */
@@ -372,4 +378,66 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   color: #FFA1C5;
   font-weight: bold;
+}
+
+/* Homepage Hero & Summary Cards Alignment Fixes */
+.hero-glass-card {
+  width: 100%;
+  max-width: 620px;
+  padding: 48px;
+  text-align: left;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-image-container {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.home-info-card {
+  flex: 1 1 500px;
+  width: 100%;
+  max-width: 540px;
+  padding: 40px;
+  text-align: left;
+}
+
+@media (min-width: 1025px) {
+  .hero-glass-card {
+    flex: 1 1 500px;
+  }
+  .hero-image-container {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-glass-card {
+    padding: 24px;
+  }
+  .home-info-card {
+    padding: 24px;
+  }
+}
+
+/* Responsive helpers for skill tab buttons */
+.visible-mobile {
+  display: none;
+}
+
+@media (max-width: 540px) {
+  .hidden-mobile {
+    display: none;
+  }
+  .visible-mobile {
+    display: inline;
+  }
+  .nav-link.skill-tab-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
 }
