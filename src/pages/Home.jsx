@@ -7,9 +7,9 @@ export default function Home({ setCurrentPage }) {
 
   const skillsData = {
     technical: [
-      { name: 'AI & Deep Learning', level: 'Pytorch, EfficientNet, CNN, Scikit-Learn', icon: Code },
-      { name: 'Data Analytics', level: 'PostgreSQL, MySQL, SQL, Tableau, Pandas, NumPy', icon: Database },
-      { name: 'Software Development', level: 'HTML, CSS, JavaScript, Laravel, C, Git', icon: Code },
+      { name: 'AI (Machine Learning & Deep Learning)', level: 'Python, PyTorch, Hugging Face, EfficientNet, CNN, Scikit-Learn', icon: Code },
+      { name: 'Data Analytics', level: 'Python, Excel, Google Spreadsheets, PostgreSQL, MySQL, SQL, Tableau', icon: Database },
+      { name: 'Software Development', level: 'HTML, CSS, JavaScript, Laravel, FastAPI, C, SQL, Git', icon: Code },
       { name: 'UI/UX Design', level: 'Figma, Interface Design, Prototyping', icon: Compass }
     ],
     management: [
@@ -48,14 +48,12 @@ export default function Home({ setCurrentPage }) {
     {
       school: 'Bina Nusantara University',
       degree: 'Bachelor of Computer Science (Data Analytics and AI)',
-      duration: '2024 - Present',
-      details: 'Cumulative GPA: 3.96 / 4.00'
+      duration: '2024 - Present'
     },
     {
       school: 'Saint John\'s School Meruya',
       degree: 'Senior High School, Science Stream',
-      duration: '2021 - 2024',
-      details: 'Final Grade: 95.61 / 100'
+      duration: '2021 - 2024'
     }
   ];
 
@@ -101,6 +99,7 @@ export default function Home({ setCurrentPage }) {
           {/* Hero Left: Glass Card */}
           <div className="glass-card" style={{
             flex: '1 1 500px',
+            maxWidth: '620px',
             padding: '48px',
             textAlign: 'left',
             boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.35)',
@@ -144,7 +143,7 @@ export default function Home({ setCurrentPage }) {
 
           {/* Hero Right: Profile Picture with Halo */}
           <div style={{
-            flex: '1 1 350px',
+            flex: '0 0 auto',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
@@ -166,10 +165,10 @@ export default function Home({ setCurrentPage }) {
           display: 'flex',
           flexWrap: 'wrap',
           gap: '40px',
-          justifyContent: 'space-between'
+          justifyContent: 'center'
         }}>
           {/* Summary Box */}
-          <div className="glass-card" style={{ flex: '1 1 500px', padding: '40px', textAlign: 'left' }}>
+          <div className="glass-card" style={{ flex: '1 1 500px', maxWidth: '540px', padding: '40px', textAlign: 'left' }}>
             <h2 style={{ fontSize: '2rem', marginBottom: '24px', position: 'relative' }}>
               Summary
               <span style={{
@@ -190,7 +189,7 @@ export default function Home({ setCurrentPage }) {
           </div>
 
           {/* Education Box */}
-          <div className="glass-card" style={{ flex: '1 1 500px', padding: '40px', textAlign: 'left' }}>
+          <div className="glass-card" style={{ flex: '1 1 500px', maxWidth: '540px', padding: '40px', textAlign: 'left' }}>
             <h2 style={{ fontSize: '2rem', marginBottom: '24px', position: 'relative' }}>
               Education
               <span style={{
@@ -224,7 +223,7 @@ export default function Home({ setCurrentPage }) {
                     <h3 style={{ fontSize: '1.25rem', color: 'white', fontWeight: '600' }}>{edu.school}</h3>
                     <p style={{ color: 'var(--accent-pink)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.degree}</p>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: '4px 0' }}>{edu.duration}</p>
-                    <p style={{ color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.details}</p>
+                    {edu.details && <p style={{ color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.details}</p>}
                   </div>
                 </div>
               ))}

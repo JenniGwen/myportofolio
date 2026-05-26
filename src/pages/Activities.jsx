@@ -1,5 +1,4 @@
-import React from 'react';
-import { Users, Shield, Calendar, ArrowRight, Star } from 'lucide-react';
+import { Users, Shield, ArrowRight, Star, BookOpen } from 'lucide-react';
 
 export const activitiesData = [
   {
@@ -9,14 +8,17 @@ export const activitiesData = [
     role: 'Vice President',
     duration: 'Feb 2026 - Present',
     icon: Users,
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop',
+    image: '/ureeka.jpeg',
+    subpageImages: ['/ureeka_leaders.jpeg', '/ureeka.jpeg'],
     points: [
+      'Working together with Abraham Gregorius Andersion Thio as the President to share leadership responsibilities and execute organizational tasks.',
       'Overseeing and coordinating the strategic operations of 5 core divisions: Training & Course, Human Resources, Marketing, Partnership, and Web Development.',
       'Fostering professional collaborations with university faculty and lecturers to organize technical training programs, technology competitions, and academic workshops.',
       'Leading cross-divisional coordination to ensure consistent execution of organizational initiatives and member engagement.',
       'Active Hackathon Participant (Feb 2025 - Jan 2026): Competed in 5+ business and technology competitions, gaining mentorship in mobile development, AI, and IoT.',
       'Recognized as a Top 10 finalist in Samsung Solve for Tomorrow 2025, selected from all national competitors.'
-    ]
+    ],
+    description: "As the Vice President of Ureeka BINUS, I work together with Abraham Gregorius Andersion Thio as the President, co-leading the organization and executing operational tasks together. My role involves overseeing and coordinating the strategic operations of 5 core divisions: Training & Course, Human Resources, Marketing, Partnership, and Web Development.\n\nKey Focus Areas:\n- Fostering professional collaborations with university faculty and lecturers to organize technical training programs, technology competitions, and academic workshops.\n- Leading cross-divisional coordination to ensure consistent execution of organizational initiatives and member engagement.\n- Active Hackathon Participant (Feb 2025 - Jan 2026): Competed in 5+ business and technology competitions, gaining mentorship in mobile development, AI, and IoT.\n- Recognized as a Top 10 finalist in Samsung Solve for Tomorrow 2025, selected from all national competitors."
   },
   {
     id: 'aiesec-pc',
@@ -25,12 +27,14 @@ export const activitiesData = [
     role: 'Team Member of Project Controller',
     duration: 'Feb 2025 - Jan 2026',
     icon: Shield,
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop',
+    image: '/fgl.jpeg',
+    subpageImages: ['/fgl.jpeg', '/pc.jpeg'],
     points: [
-      'Tracked and monitored 10+ concurrent projects, ensuring compliance with AIESEC and BINUS policies.',
-      'Led end-to-end planning and execution for core initiatives including Global Village, Local Conference, and Youth Career Compass.',
-      'Collaborated closely with Executive Boards to optimize schedules, manage project resources, and align deliverables.'
-    ]
+      'Tracked and monitored progress of 10+ concurrent projects, ensuring compliance with AIESEC and BINUS policies.',
+      'Managed end-to-end planning and execution for initiatives such as Global Village, Impact Circle, and Youth Career Compass.',
+      'Collaborated with Executive Boards to optimize timelines, resources, and project outcomes.'
+    ],
+    description: "As part of the Finance, Governance, and Legality division, Project Controllers work under the supervision of Nathan Valliant, Manager of Project Control, to support and oversee AIESEC projects and initiatives. Our role involves collaborating with Organizing Committees through regular meetings, providing feedback and recommendations for improvement, and ensuring smooth project execution. In addition, we are responsible for compiling and maintaining documents in compliance with both AIESEC and Binus regulations.\n\nKey Responsibilities:\n1. Tracked and monitored progress of 10+ concurrent projects, ensuring compliance with AIESEC and BINUS policies.\n2. Managed end-to-end planning and execution for initiatives such as Global Village, Impact Circle, and Youth Career Compass.\n3. Collaborated with Executive Boards to optimize timelines, resources, and project outcomes."
   },
   {
     id: 'aiesec-ytja',
@@ -39,13 +43,15 @@ export const activitiesData = [
     role: 'Organizing Committee VP of Finance',
     duration: 'July 2025 - Sep 2025',
     icon: Shield,
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop',
+    image: '/ytxja.jpeg',
+    subpageImages: ['/ytxja.jpeg', '/ocvpytxja.jpeg'],
     points: [
-      'Developed and executed budget plans, monitored expenses, and ensured cost efficiency for large-scale promotional events.',
-      'Oversaw financial communications, processed and audited 800+ transactions in a single month, and optimized workflows.',
-      'Trained finance team members on standard procedures, financial compliance, and delegated responsibilities effectively.',
-      'Produced accurate, audit-ready financial reports and maintained detailed digital transaction archives.'
-    ]
+      'Developed and executed budget plans, monitored expenses, and ensured cost efficiency for large-scale events.',
+      'Oversaw financial communications, processed 800+ invoices in one month, and improved operational workflows.',
+      'Trained Finance teams and other divisions on financial procedures and delegated responsibilities effectively.',
+      'Produced accurate financial reports and maintained audit-ready documentation.'
+    ],
+    description: "Youth Today x Join AIESEC is a brand initiative by AIESEC in Binus aimed at recruiting new members and introducing them to the organization’s culture and leadership values. The event attracted over 874 registered delegates who joined a seminar to learn more about AIESEC, followed by a structured selection process including Leaderless Group Discussions, interview rounds, and a probation phase to identify and develop future leaders.\n\nKey Responsibilities:\n1. Developed and executed budget plans, monitored expenses, and ensured cost efficiency for large-scale events.\n2. Oversaw financial communications, processed 800+ invoices in one month, and improved operational workflows.\n3. Trained Finance teams and other divisions on financial procedures and delegated responsibilities effectively.\n4. Produced accurate financial reports and maintained audit-ready documentation."
   },
   {
     id: 'aiesec-igv',
@@ -54,28 +60,49 @@ export const activitiesData = [
     role: 'Organizing Committee VP of Finance',
     duration: 'Mar 2025 - Aug 2025',
     icon: Shield,
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop',
+    image: '/igv.jpeg',
+    subpageImages: ['/ocvpigv.jpeg', '/igv.jpeg'],
     points: [
-      'Designed and managed incoming volunteer program budgets in alignment with AIESEC Indonesia\'s 70/30 financial framework.',
-      'Controlled departmental spending, authorized reimbursements, and verified exchange transactions to maintain absolute accuracy.',
-      'Trained finance teams and collaborated with other operational divisions to ensure seamless and compliant financial operations.',
-      'Compiled comprehensive financial statements and archived detailed transaction records for internal audit procedures.'
-    ]
+      'Designed and managed budgets in line with AIESEC Indonesia’s 70/30 financial framework.',
+      'Controlled spending, managed reimbursements, and verified transactions to maintain financial accuracy.',
+      'Trained Finance teams and collaborated with other divisions to ensure smooth financial operations.',
+      'Compiled comprehensive financial reports and prepared documentation for audits.'
+    ],
+    description: "During my term as an Organizing Committee member in AIESEC, I had the privilege of launching the first Incoming Global Volunteer initiative in collaboration with Teach for Indonesia (TFI), aligned with SDG 4: Quality Education. Over the course of six weeks, our team educated more than 50 underprivileged children, while facilitating the teaching program of 3 international Exchange Participants and 8 Local Volunteers, creating a meaningful impact through global collaboration and local action.\n\nKey Responsibilities:\n1. Designed and managed budgets in line with AIESEC Indonesia’s 70/30 financial framework.\n2. Controlled spending, managed reimbursements, and verified transactions to maintain financial accuracy.\n3. Trained Finance teams and collaborated with other divisions to ensure smooth financial operations.\n4. Compiled comprehensive financial reports and prepared documentation for audits."
+  },
+  {
+    id: 'potato-bootcamp',
+    title: 'Potato Algorithmo Bootcamp',
+    subtitle: 'Private Coding Bootcamp',
+    role: 'Co-founder and Part time Teacher',
+    duration: 'May 2025 - July 2025',
+    icon: BookOpen,
+    image: '/ngajar.png',
+    subpageImages: ['/ngajar.png', '/potato.png'],
+    points: [
+      'Reached out to 500+ potential students, converting over 50 into course participants.',
+      'Taught 50+ students in an Algorithm and Programming course (C programming language).',
+      'Designed course materials, including posters, outlines, Instagram content, and registration forms.',
+      'Set course pricing strategies and tracked financial performance.'
+    ],
+    description: "Potato Algorithmo Bootcamp is a private coding bootcamp founded in Jakarta to help aspiring students build a strong foundation in computer science and software development. In this role, I co-founded the bootcamp and served as a part-time teacher, designing curricula and delivering hands-on programming sessions to ensure high student satisfaction and academic growth.\n\nKey Responsibilities:\n1. Reached out to 500+ potential students, converting over 50 into course participants.\n2. Taught 50+ students in an Algorithm and Programming course (C programming language).\n3. Designed course materials, including posters, outlines, Instagram content, and registration forms.\n4. Set course pricing strategies and tracked financial performance."
   },
   {
     id: 'sjs-volunteering',
     title: 'Saint John\'s School Meruya',
     subtitle: 'Algorithm Teaching Program (Freshmen Project)',
     role: 'Volunteer Teacher & Presenter',
-    duration: 'First Semester 2024',
+    duration: 'Oct - Nov 2024',
     icon: Star,
-    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop',
+    image: '/sjs.jpeg',
+    subpageImages: ['/sjs.jpeg', '/sjs1.jpeg', '/sjs2.jpeg'],
     points: [
       'Collaborated on a mandatory freshmen community service project to teach Algorithm fundamentals to Primary 6 students at Saint John\'s School Meruya.',
       'Partnered in a cross-functional team with Jiovanny Lim, Aviel Aquino, Pira Destyasha Safira, Brandon Angelo Halim, Xander Trevor Tengari, Jonathan Hassanudin, Vigo Lianto, Naufal Maulana Ichlas, Jason, and Freshmen Partner Steven Valentino Halim.',
       'Designed interactive, engaging, and simplified logic lesson materials to introduce basic computer science and algorithmic workflows to young students.',
       'Guided and mentored students through practical logic puzzles and interactive team activities to spark early interest in STEM and problem solving.'
-    ]
+    ],
+    description: "The Algorithm Teaching Program at Saint John's School Meruya was a freshmen community service project focused on introducing core computer science fundamentals to Primary 6 students. Our group partnered to create engaging programming courses that spark early interest in STEM fields, logic puzzles, and critical thinking.\n\nKey Responsibilities:\n1. Collaborated on a mandatory freshmen community service project to teach Algorithm fundamentals to Primary 6 students at Saint John's School Meruya.\n2. Partnered in a cross-functional team with Jiovanny Lim, Aviel Aquino, Pira Destyasha Safira, Brandon Angelo Halim, Xander Trevor Tengari, Jonathan Hassanudin, Vigo Lianto, Naufal Maulana Ichlas, Jason, and Freshmen Partner Steven Valentino Halim.\n3. Designed interactive, engaging, and simplified logic lesson materials to introduce basic computer science and algorithmic workflows to young students.\n4. Guided and mentored students through practical logic puzzles and interactive team activities to spark early interest in STEM and problem solving."
   }
 ];
 
@@ -89,7 +116,7 @@ export default function Activities({ setCurrentPage, setSelectedActivityId }) {
   return (
     <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh' }}>
       <div className="container">
-        <h1 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '16px' }}>
+        <h1 style={{ fontSize: 'clamp(2.2rem, 6vw, 3rem)', textAlign: 'center', marginBottom: '16px' }}>
           My <span className="text-gradient">Activities & Organizations</span>
         </h1>
         <p style={{ color: 'var(--text-secondary)', textAlign: 'center', maxWidth: '600px', margin: '0 auto 56px', fontSize: '1.05rem' }}>

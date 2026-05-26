@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div className="container" style={{ maxWidth: '650px' }}>
-        <h1 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '16px' }}>
+        <h1 style={{ fontSize: 'clamp(2.2rem, 6vw, 3rem)', textAlign: 'center', marginBottom: '16px' }}>
           Let's <span className="text-gradient">Connect</span>
         </h1>
         <p style={{ color: 'var(--text-secondary)', textAlign: 'center', maxWidth: '500px', margin: '0 auto 48px', fontSize: '1.05rem' }}>
@@ -39,9 +39,9 @@ export default function Contact() {
               }}>
                 <Mail size={20} />
               </div>
-              <div style={{ textAlign: 'left' }}>
+              <div style={{ textAlign: 'left', minWidth: 0 }}>
                 <h4 style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email Me</h4>
-                <a href="mailto:Jennigwen25@gmail.com" style={{ color: 'white', textDecoration: 'none', fontWeight: '600', fontSize: '1.05rem', transition: 'var(--transition-smooth)' }}
+                <a href="mailto:Jennigwen25@gmail.com" style={{ color: 'white', textDecoration: 'none', fontWeight: '600', fontSize: '1.05rem', transition: 'var(--transition-smooth)', wordBreak: 'break-all' }}
                    onMouseEnter={(e) => e.target.style.color = 'var(--accent-pink)'}
                    onMouseLeave={(e) => e.target.style.color = 'white'}>
                   Jennigwen25@gmail.com

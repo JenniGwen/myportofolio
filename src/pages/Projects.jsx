@@ -92,7 +92,7 @@ export default function Projects({ setCurrentPage, setSelectedProjectId }) {
   return (
     <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh' }}>
       <div className="container">
-        <h1 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '16px' }}>
+        <h1 style={{ fontSize: 'clamp(2.2rem, 6vw, 3rem)', textAlign: 'center', marginBottom: '16px' }}>
           My <span className="text-gradient">Technical Projects</span>
         </h1>
         <p style={{ color: 'var(--text-secondary)', textAlign: 'center', maxWidth: '600px', margin: '0 auto 56px', fontSize: '1.05rem' }}>
