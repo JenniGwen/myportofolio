@@ -190,9 +190,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link.active:hover {
   transform: translateY(-1px);
-  box-shadow: 0 0 0 1.5px rgba(244, 114, 182, 0.6), 
-              0 0 10px 2px rgba(124, 58, 237, 0.4);
-  filter: brightness(1.08);
+  box-shadow: 0 0 0 2px #ffffff, 
+              0 0 8px 3px #f472b6, 
+              0 0 18px 6px #7c3aed;
+  filter: brightness(1.15);
 }
 
 /* Glassmorphism Cards */
@@ -239,9 +240,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-gradient:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 0 1.5px rgba(244, 114, 182, 0.7), 
-              0 0 12px 2px rgba(124, 58, 237, 0.45);
-  filter: brightness(1.08);
+  box-shadow: 0 0 0 3px #ffffff, 
+              0 0 12px 5px #f472b6, 
+              0 0 28px 10px #7c3aed,
+              0 0 60px 20px rgba(124, 58, 237, 0.85);
+  filter: brightness(1.2);
 }
 
 /* Project & Activity Custom Styling */
