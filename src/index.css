@@ -41,9 +41,48 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.06) 0%, transparent 40%);
+  position: relative;
+}
+
+/* Floating Ambient Glows (Compositor-only animations for ultra high performance) */
+body::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.06) 0%, transparent 70%);
+  z-index: -2;
+  pointer-events: none;
+  animation: floatGlowOne 25s infinite alternate ease-in-out;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -10%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(219, 39, 119, 0.04) 0%, transparent 70%);
+  z-index: -2;
+  pointer-events: none;
+  animation: floatGlowTwo 30s infinite alternate ease-in-out;
+}
+
+@keyframes floatGlowOne {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(8%, 12%) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes floatGlowTwo {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-8%, -12%) scale(1.15); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
 /* Background image overrides when home is selected */
