@@ -190,7 +190,7 @@ export default function Activities({ setCurrentPage, setSelectedActivityId }) {
                       fontSize: '0.9rem'
                     }}
                   >
-                    Manage & View <ArrowRight size={16} />
+                    View Details <ArrowRight size={16} />
                   </button>
                 </div>
               </div>
