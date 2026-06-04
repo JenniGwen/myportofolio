@@ -63,8 +63,8 @@ export const projectsData = [
     image: '/photoboothique.png',
     description: 'A web application developed for the Software Engineering course at BINUS University in a team with Fairy Yumi Ranita and Jiovanny Lim. Served as the Project Manager leading the development lifecycle according to the Waterfall SDLC. Personally responsible for designing and implementing the database schema for image storage, integrating Cloudinary for media gallery management, and configuring the QR code generation module for instant photo retrieval.',
     github: 'https://github.com/mojiotoo/photoboothique',
-    demo: null,
-    youtube: null,
+    demo: 'https://photoboothique-production.up.railway.app/',
+    youtube: 'https://www.youtube.com/embed/vc-G3H4MAeA',
     skills: ['Laravel', 'PHP', 'MySQL', 'Cloudinary', 'QR Code Generation', 'Waterfall SDLC', 'Project Management']
   },
   {
@@ -77,7 +77,7 @@ export const projectsData = [
     description: 'A computer vision application named dermaAI designed to detect skin lesions and melanoma, developed as a group project for the Computer Vision course at BINUS University. Developed in a team with Kelly Setiawan, Fairy Yumi Ranita, Jiovanny Lim, Aviel Aquino, and Jordhy Alexander Wibisono. Served as the Lead AI Engineer responsible for training and fine-tuning deep learning models to accurately classify lesions and melanoma from skin images.',
     github: 'https://github.com/techaddict34/ComVis-Project/tree/main',
     demo: null,
-    youtube: null,
+    youtube: 'https://www.youtube.com/embed/NdEmSUA3Cx0',
     skills: ['PyTorch', 'Computer Vision', 'Deep Learning', 'Convolutional Neural Networks', 'Medical Imaging']
   }
 ];
