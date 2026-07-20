@@ -1,0 +1,6 @@
+*.zip
+public - Copy
+node_modules
+dist
+.git
+.vercel

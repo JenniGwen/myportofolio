@@ -20,7 +20,7 @@ export default function Home({ setCurrentPage }) {
     languages: [
       { name: 'English', level: 'IELTS Band 8 (Professional Working Proficiency)', icon: CheckCircle2 },
       { name: 'Indonesian', level: 'Native Speaker', icon: CheckCircle2 },
-      { name: 'Mandarin', level: 'HSK 5 Candidate', icon: CheckCircle2 }
+      { name: 'Mandarin', level: 'HSK 4 Candidate', icon: CheckCircle2 }
     ]
   };
 
@@ -170,7 +170,7 @@ export default function Home({ setCurrentPage }) {
               }}></span>
             </h2>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8' }}>
-              Innovative fourth-semester Computer Science student at BINUS University specializing in Data Analytics and AI, with hands-on experience building ML pipelines, full-stack applications, and data-driven solutions. 
+              Innovative fifth-semester Computer Science student at BINUS University specializing in Data Analytics and AI, with hands-on experience building ML pipelines, full-stack applications, and data-driven solutions. 
               <br /><br />
               Currently serving as Vice President of Ureeka BINUS overseeing 5 core divisions and previously directed 10+ projects at AIESEC in BINUS with strong project management and financial oversight. Deloitte Data Analytics certified, with advancing expertise in ML/DL, SQL-based analytics, Tableau, and Python to deliver actionable insights and solve complex industrial challenges.
             </p>
