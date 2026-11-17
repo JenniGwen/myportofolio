@@ -4,7 +4,7 @@ import { Github, Linkedin, Instagram } from '../components/SocialIcons';
 
 export default function Contact() {
   return (
-    <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'var(--bg-primary)', minHeight: '85vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div className="container" style={{ maxWidth: '650px' }}>
         <h1 style={{ fontSize: 'clamp(2.2rem, 6vw, 3rem)', textAlign: 'center', marginBottom: '16px' }}>
           Let's <span className="text-gradient">Connect</span>
@@ -16,7 +16,7 @@ export default function Contact() {
         <div className="glass-card" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
           {/* Section Header */}
           <div style={{ textAlign: 'center' }}>
-            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+            <h3 style={{ fontSize: '1.5rem', color: 'var(--text-primary)', marginBottom: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
               Contact Channels
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Direct communication details</p>
@@ -25,7 +25,7 @@ export default function Contact() {
           {/* Contact Details List */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {/* Email Channel */}
-            <div className="glass-card" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center', background: 'rgba(255, 255, 255, 0.01)' }}>
+            <div className="glass-card" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center', background: 'var(--surface-0)' }}>
               <div style={{
                 width: '44px',
                 height: '44px',
@@ -41,16 +41,16 @@ export default function Contact() {
               </div>
               <div style={{ textAlign: 'left', minWidth: 0 }}>
                 <h4 style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email Me</h4>
-                <a href="mailto:Jennigwen25@gmail.com" style={{ color: 'white', textDecoration: 'none', fontWeight: '600', fontSize: '1.05rem', transition: 'var(--transition-smooth)', wordBreak: 'break-all' }}
+                <a href="mailto:Jennigwen25@gmail.com" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: '600', fontSize: '1.05rem', transition: 'var(--transition-smooth)', wordBreak: 'break-all' }}
                    onMouseEnter={(e) => e.target.style.color = 'var(--accent-pink)'}
-                   onMouseLeave={(e) => e.target.style.color = 'white'}>
+                   onMouseLeave={(e) => e.target.style.color = 'var(--text-primary)'}>
                   Jennigwen25@gmail.com
                 </a>
               </div>
             </div>
 
             {/* Phone Channel */}
-            <div className="glass-card" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center', background: 'rgba(255, 255, 255, 0.01)' }}>
+            <div className="glass-card" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center', background: 'var(--surface-0)' }}>
               <div style={{
                 width: '44px',
                 height: '44px',
@@ -66,16 +66,16 @@ export default function Contact() {
               </div>
               <div style={{ textAlign: 'left' }}>
                 <h4 style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Call Me</h4>
-                <a href="tel:+6287882532006" style={{ color: 'white', textDecoration: 'none', fontWeight: '600', fontSize: '1.05rem', transition: 'var(--transition-smooth)' }}
+                <a href="tel:+6287882532006" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: '600', fontSize: '1.05rem', transition: 'var(--transition-smooth)' }}
                    onMouseEnter={(e) => e.target.style.color = 'var(--accent-pink)'}
-                   onMouseLeave={(e) => e.target.style.color = 'white'}>
+                   onMouseLeave={(e) => e.target.style.color = 'var(--text-primary)'}>
                   +62 878-8253-2006
                 </a>
               </div>
             </div>
 
             {/* Location Channel */}
-            <div className="glass-card" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center', background: 'rgba(255, 255, 255, 0.01)' }}>
+            <div className="glass-card" style={{ padding: '20px', display: 'flex', gap: '16px', alignItems: 'center', background: 'var(--surface-0)' }}>
               <div style={{
                 width: '44px',
                 height: '44px',
@@ -91,7 +91,7 @@ export default function Contact() {
               </div>
               <div style={{ textAlign: 'left' }}>
                 <h4 style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Location</h4>
-                <p style={{ color: 'white', fontWeight: '600', fontSize: '1.05rem' }}>
+                <p style={{ color: 'var(--text-primary)', fontWeight: '600', fontSize: '1.05rem' }}>
                   Jakarta, Indonesia
                 </p>
               </div>
@@ -99,8 +99,8 @@ export default function Contact() {
           </div>
 
           {/* Social Connect panel */}
-          <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '28px' }}>
-            <h4 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '20px', fontWeight: '600', textAlign: 'center' }}>
+          <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '28px' }}>
+            <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem', marginBottom: '20px', fontWeight: '600', textAlign: 'center' }}>
               Connect with me on Socials
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -130,13 +130,13 @@ export default function Contact() {
                     fontSize: '0.9rem',
                     flex: '1 1 200px',
                     justifyContent: 'center',
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    color: 'white',
+                    background: 'var(--surface-1)',
+                    border: '1px solid var(--border-subtle)',
+                    color: 'var(--text-primary)',
                     boxShadow: 'none'
                   }}
-                  onMouseEnter={(e) => e.target.style.background = 'rgba(255, 255, 255, 0.1)'}
-                  onMouseLeave={(e) => e.target.style.background = 'rgba(255, 255, 255, 0.05)'}
+                  onMouseEnter={(e) => e.target.style.background = 'var(--surface-2)'}
+                  onMouseLeave={(e) => e.target.style.background = 'var(--surface-1)'}
                 >
                   <Github size={18} /> GitHub
                 </a>
@@ -154,7 +154,7 @@ export default function Contact() {
                   justifyContent: 'center',
                   background: 'rgba(236, 72, 153, 0.15)',
                   border: '1px solid rgba(236, 72, 153, 0.3)',
-                  color: 'white',
+                  color: 'var(--text-primary)',
                   boxShadow: 'none'
                 }}
                 onMouseEnter={(e) => {

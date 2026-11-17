@@ -114,7 +114,7 @@ export default function Activities({ setCurrentPage, setSelectedActivityId }) {
   };
 
   return (
-    <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh' }}>
+    <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'var(--bg-primary)', minHeight: '85vh' }}>
       <div className="container">
         <h1 style={{ fontSize: 'clamp(2.2rem, 6vw, 3rem)', textAlign: 'center', marginBottom: '16px' }}>
           My <span className="text-gradient">Activities & Organizations</span>
@@ -146,7 +146,7 @@ export default function Activities({ setCurrentPage, setSelectedActivityId }) {
                     left: '12px',
                     zIndex: 2
                   }}>
-                    <span className="badge" style={{ background: 'rgba(15, 11, 36, 0.85)', backdropFilter: 'blur(4px)' }}>
+                    <span className="badge" style={{ background: 'var(--overlay-bg)', backdropFilter: 'blur(4px)' }}>
                       {activity.duration}
                     </span>
                   </div>
@@ -167,7 +167,7 @@ export default function Activities({ setCurrentPage, setSelectedActivityId }) {
                     }}>
                       <IconComponent size={20} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', color: 'white' }}>{activity.title}</h3>
+                    <h3 style={{ fontSize: '1.25rem', color: 'var(--text-primary)' }}>{activity.title}</h3>
                   </div>
 
                   <p style={{ color: 'var(--accent-purple)', fontSize: '0.85rem', fontWeight: '600', marginBottom: '16px' }}>

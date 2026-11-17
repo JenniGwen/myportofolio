@@ -5,8 +5,8 @@ import { Github, Linkedin } from './SocialIcons';
 export default function Footer({ setCurrentPage }) {
   return (
     <footer style={{
-      borderTop: '1px solid var(--glass-border)',
-      background: 'rgba(7, 5, 18, 0.9)',
+      borderTop: '1px solid var(--footer-divider)',
+      background: 'var(--footer-bg)',
       padding: '40px 24px',
       marginTop: 'auto',
       backdropFilter: 'blur(8px)'
@@ -20,7 +20,7 @@ export default function Footer({ setCurrentPage }) {
       }}>
         {/* Info */}
         <div style={{ textAlign: 'left' }}>
-          <h4 style={{ fontFamily: 'var(--font-heading)', color: 'white', marginBottom: '8px' }}>
+          <h4 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-primary)', marginBottom: '8px' }}>
             Jennifer Gwen Tanadi
           </h4>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
@@ -35,7 +35,7 @@ export default function Footer({ setCurrentPage }) {
             target="_blank" 
             rel="noopener noreferrer"
             style={{ color: 'var(--text-secondary)', transition: 'var(--transition-smooth)' }}
-            onMouseEnter={(e) => e.target.style.color = 'white'}
+            onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
             onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
           >
             <Github size={20} />
@@ -45,7 +45,7 @@ export default function Footer({ setCurrentPage }) {
             target="_blank" 
             rel="noopener noreferrer"
             style={{ color: 'var(--text-secondary)', transition: 'var(--transition-smooth)' }}
-            onMouseEnter={(e) => e.target.style.color = 'white'}
+            onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
             onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
           >
             <Linkedin size={20} />
@@ -53,7 +53,7 @@ export default function Footer({ setCurrentPage }) {
           <a 
             href="mailto:Jennigwen25@gmail.com"
             style={{ color: 'var(--text-secondary)', transition: 'var(--transition-smooth)' }}
-            onMouseEnter={(e) => e.target.style.color = 'white'}
+            onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
             onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
           >
             <Mail size={20} />
@@ -65,7 +65,7 @@ export default function Footer({ setCurrentPage }) {
         textAlign: 'center',
         color: 'var(--text-secondary)',
         fontSize: '0.8rem',
-        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+        borderTop: '1px solid var(--footer-divider)',
         paddingTop: '16px'
       }}>
         © {new Date().getFullYear()} Jennifer Gwen Tanadi.

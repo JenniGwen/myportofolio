@@ -3,6 +3,69 @@ import { ArrowRight, Code, Database, Cpu, Globe } from 'lucide-react';
 
 export const projectsData = [
   {
+    id: '100chinese',
+    title: '100Chinese',
+    tagline: 'Mandarin Learning Mobile Application',
+    category: 'Mobile / Full-stack',
+    icon: Code,
+    image: '/chinese1.png',
+    role: 'Genius Growth AI · Full Stack Web and Mobile Developer Intern (July 2026 - Present)',
+    description: 'Developed 100Chinese, a mobile application by Genius Growth AI, during my internship as a Full Stack Web and Mobile Developer. I built the app with Flutter on the frontend and Golang with Firebase on the backend, served through NGINX, designed screens in Figma, and set up AI automation workflows with n8n.',
+    highlights: [
+      'Developed the 100Chinese mobile application (Flutter, Golang, Firebase, NGINX, Figma, n8n AI automation)'
+    ],
+    github: null,
+    demo: 'https://app.100chinese.id/',
+    youtube: null,
+    screenshots: ['/chinese1.png', '/chinese2.png', '/chinese3.png'],
+    skills: ['Flutter', 'Golang', 'Firebase', 'NGINX', 'Figma', 'n8n', 'AI Automation']
+  },
+  {
+    id: 'wharf-ai',
+    title: 'Wharf AI',
+    tagline: 'Multi-Agent FMCG Inventory Control Tower on AWS',
+    category: 'Cloud / Agentic AI',
+    icon: Globe,
+    image: '/AWS%20Finalist.jpeg',
+    imagePosition: 'center 55%',
+    role: 'Cloud Systems and Integration Engineer (Sept 2026 - Present)',
+    description: 'Wharf AI is a multi-agent FMCG inventory control tower that brought my team (with Andrian Raihannudin and Gregorius Willson) to the finals of the Sokrates BINUS Agentic AI Hackathon, sponsored by AWS, SAP, and APP. As the Cloud Systems and Integration Engineer, I architected and deployed the platform on AWS (CloudFront, S3, ECS Fargate, EC2), integrated the backend with RDS PostgreSQL and DynamoDB secured by Cognito and IAM, and automated expiry-risk scans and approval alerts using EventBridge, SNS, and CloudWatch.',
+    highlights: [
+      'Architected and deployed a multi-agent FMCG inventory control tower on AWS (CloudFront, S3, ECS Fargate, EC2)',
+      'Integrated the backend with RDS PostgreSQL and DynamoDB, secured with Cognito and IAM',
+      'Automated expiry-risk scans and approval alerts with EventBridge, SNS, and CloudWatch',
+      'Finalist in the Sokrates BINUS Agentic AI Hackathon (sponsored by AWS, SAP, and APP)'
+    ],
+    github: null,
+    demo: 'https://wharf.id/',
+    youtube: 'https://www.youtube.com/embed/LTOsvtyagxg',
+    proofImage: {
+      src: '/AWS%20Finalist.jpeg',
+      caption: 'Finalists at the Sokrates BINUS Agentic AI Hackathon 2026, powered by AWS'
+    },
+    skills: ['AWS', 'ECS Fargate', 'CloudFront', 'S3', 'EC2', 'RDS PostgreSQL', 'DynamoDB', 'Cognito', 'IAM', 'EventBridge', 'SNS', 'CloudWatch', 'Multi-Agent AI']
+  },
+  {
+    id: 'motorix',
+    title: 'MotoriX',
+    tagline: 'AI-Guided At-Home Rehabilitation for Post-Stroke Patients',
+    category: 'AI / HealthTech',
+    icon: Cpu,
+    image: 'https://img.youtube.com/vi/cy6LDq83Zmk/hqdefault.jpg',
+    role: 'AI Engineer & UI/UX Designer',
+    description: 'MotoriX is a rehabilitation app that helps post-stroke patients keep recovering at home. Physiotherapists have limited time for each patient, so much of the recovery depends on exercises done between sessions with no one checking whether they are done correctly. MotoriX acts as a guide at home: patients follow exercise videos while the app watches through the camera and gives feedback on whether each movement matches the reference. Built with Andrian Raihannudin, Stephanie Vania Suwardi, and Gregorius Willson for developerday.id and APICTA 2026. As the AI Engineer, I built the pose-estimation pipeline with MediaPipe to extract body keypoints from the reference exercise videos and from the patient\'s live movement, then compared the two to judge whether the patient performs each exercise correctly. I was also responsible for the UI/UX design, keeping the interface simple and accessible for patients with limited mobility.',
+    highlights: [
+      'Built a MediaPipe pose-estimation pipeline to extract body keypoints from reference stroke-rehabilitation exercise videos',
+      'Compared patient keypoints against the reference movement to assess whether each exercise is performed correctly',
+      'Designed the UI/UX with accessibility in mind for post-stroke patients with limited mobility',
+      'Competed at developerday.id and APICTA 2026'
+    ],
+    github: 'https://github.com/MotoriX-ai/main-apps',
+    demo: null,
+    youtube: 'https://www.youtube.com/embed/cy6LDq83Zmk',
+    skills: ['MediaPipe', 'Pose Estimation', 'Computer Vision', 'Keypoint Matching', 'UI/UX Design', 'HealthTech']
+  },
+  {
     id: 'isitfake',
     title: 'Isitfake?',
     tagline: 'Deepfake Detection Web Application',
@@ -90,7 +153,7 @@ export default function Projects({ setCurrentPage, setSelectedProjectId }) {
   };
 
   return (
-    <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh' }}>
+    <div className="animate-fade-in" style={{ padding: '80px 24px', background: 'var(--bg-primary)', minHeight: '85vh' }}>
       <div className="container">
         <h1 style={{ fontSize: 'clamp(2.2rem, 6vw, 3rem)', textAlign: 'center', marginBottom: '16px' }}>
           My <span className="text-gradient">Technical Projects</span>
@@ -117,7 +180,8 @@ export default function Projects({ setCurrentPage, setSelectedProjectId }) {
                 <div className="project-image-container" style={{ margin: '16px', marginBottom: '0' }}>
                   <img 
                     src={project.image.startsWith('/public') ? project.image.replace('/public', '') : project.image} 
-                    alt={project.title} 
+                    alt={project.title}
+                    style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
                     onError={(e) => {
                       // Fallback image in case the local image isn't available
                       e.target.src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop';
@@ -129,7 +193,7 @@ export default function Projects({ setCurrentPage, setSelectedProjectId }) {
                     left: '12px',
                     zIndex: 2
                   }}>
-                    <span className="badge" style={{ background: 'rgba(15, 11, 36, 0.85)', backdropFilter: 'blur(4px)' }}>
+                    <span className="badge" style={{ background: 'var(--overlay-bg)', backdropFilter: 'blur(4px)' }}>
                       {project.category}
                     </span>
                   </div>
@@ -137,7 +201,7 @@ export default function Projects({ setCurrentPage, setSelectedProjectId }) {
 
                 {/* Details */}
                 <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flexGrow: 1, textAlign: 'left' }}>
-                  <h3 style={{ fontSize: '1.3rem', color: 'white', marginBottom: '8px' }}>{project.title}</h3>
+                  <h3 style={{ fontSize: '1.3rem', color: 'var(--text-primary)', marginBottom: '8px' }}>{project.title}</h3>
                   <p style={{ color: 'var(--accent-purple)', fontSize: '0.85rem', fontWeight: '600', marginBottom: '16px' }}>
                     {project.tagline}
                   </p>
@@ -153,7 +217,7 @@ export default function Projects({ setCurrentPage, setSelectedProjectId }) {
                       </span>
                     ))}
                     {project.skills.length > 3 && (
-                      <span className="badge" style={{ fontSize: '0.75rem', padding: '2px 8px', background: 'rgba(255,255,255,0.05)', color: 'white' }}>
+                      <span className="badge" style={{ fontSize: '0.75rem', padding: '2px 8px', background: 'var(--surface-1)', color: 'var(--text-primary)' }}>
                         +{project.skills.length - 3} more
                       </span>
                     )}

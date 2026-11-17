@@ -17,8 +17,36 @@
   --btn-yellow-dark: #FCD34D;
   
   /* Custom sequential gradient (purple dominant, transitioning to pink and dark yellow) */
-  --accent-gradient: linear-gradient(135deg, var(--btn-purple) 0%, var(--accent-pink) 65%, var(--btn-yellow-dark) 100%);
+  /* Gradient stops are fixed so day and night mode use the exact same gradient */
+  --grad-purple: #7c3aed;
+  --grad-pink: #f472b6;
+  --grad-yellow: #FCD34D;
+  --accent-gradient: linear-gradient(135deg, var(--grad-purple) 0%, var(--grad-pink) 65%, var(--grad-yellow) 100%);
+  --accent-gradient-short: linear-gradient(135deg, #c084fc, var(--grad-pink));
   
+  --accent-indigo: #818cf8;
+
+  /* Surfaces & overlays (dark theme) */
+  --footer-bg: rgba(7, 5, 18, 0.9);
+  --footer-divider: rgba(255, 255, 255, 0.05);
+  --header-bg: rgba(13, 9, 29, 0.65);
+  --overlay-bg: rgba(15, 11, 36, 0.85);
+  --surface-0: rgba(255, 255, 255, 0.02);
+  --surface-1: rgba(255, 255, 255, 0.05);
+  --surface-2: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --media-bg: rgba(0, 0, 0, 0.4);
+  --input-bg: rgba(13, 9, 29, 0.45);
+  --input-bg-focus: rgba(13, 9, 29, 0.65);
+  --hero-overlay: linear-gradient(rgba(7, 5, 18, 0.45), rgba(7, 5, 18, 0.85));
+  --card-border: rgba(192, 132, 252, 0.15);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), 0 0 10px 1px rgba(124, 58, 237, 0.04);
+  --card-shadow-hover: 0 15px 35px -5px rgba(0, 0, 0, 0.5), 0 0 24px 6px rgba(124, 58, 237, 0.35), 0 0 14px 3px rgba(244, 114, 182, 0.25);
+  --badge-bg: rgba(255, 161, 197, 0.15);
+  --badge-border: rgba(255, 161, 197, 0.25);
+  --profile-border: rgba(255, 255, 255, 0.25);
+
   --glass-bg: rgba(13, 9, 29, 0.6);
   --glass-border: rgba(255, 255, 255, 0.07);
   --glass-border-glow: rgba(147, 51, 234, 0.35);
@@ -26,6 +54,47 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-heading: 'Outfit', system-ui, sans-serif;
   --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light theme: white with a faint blush of pink, ink-plum text, deeper accents for contrast */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #fffafc;
+  --bg-secondary: #fdf4f8;
+  --text-primary: #1f1a2e;
+  --text-secondary: #5f5a6e;
+
+  --accent-purple: #7c3aed;
+  --accent-pink: #db2777;
+  --accent-yellow: #d97706;
+  --accent-indigo: #4f46e5;
+
+  --footer-bg: #f8cfe0;
+  --footer-divider: rgba(190, 24, 93, 0.18);
+  --header-bg: rgba(255, 255, 255, 0.97);
+  --overlay-bg: rgba(255, 255, 255, 0.95);
+  --surface-0: rgba(255, 255, 255, 0.6);
+  --surface-1: rgba(31, 26, 46, 0.04);
+  --surface-2: rgba(31, 26, 46, 0.08);
+  --border-subtle: rgba(31, 26, 46, 0.1);
+  --border-strong: rgba(31, 26, 46, 0.2);
+  --media-bg: rgba(31, 26, 46, 0.05);
+  --input-bg: #fffbfd;
+  --input-bg-focus: #ffffff;
+  --hero-overlay: linear-gradient(rgba(255, 250, 252, 0.12), rgba(255, 250, 252, 0.5));
+  --card-border: rgba(124, 58, 237, 0.14);
+  --card-shadow: 0 1px 2px rgba(31, 26, 46, 0.04), 0 8px 24px -8px rgba(31, 26, 46, 0.12);
+  --card-shadow-hover: 0 18px 36px -12px rgba(124, 58, 237, 0.28), 0 0 0 1px rgba(219, 39, 119, 0.2);
+  --badge-bg: rgba(219, 39, 119, 0.08);
+  --badge-border: rgba(219, 39, 119, 0.22);
+  --profile-border: rgba(255, 255, 255, 0.9);
+
+  --glass-bg: rgba(255, 255, 255, 0.96);
+  --glass-border: rgba(31, 26, 46, 0.08);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 * {
@@ -39,6 +108,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   min-height: 100vh;
+  transition: background-color 0.35s ease, color 0.35s ease;
   overflow-x: hidden;
   line-height: 1.6;
   position: relative;
@@ -87,7 +157,7 @@ body::after {
 
 /* Background image overrides when home is selected */
 .bg-magical-forest {
-  background-image: linear-gradient(rgba(7, 5, 18, 0.75), rgba(7, 5, 18, 0.9)), url('/image 11.png');
+  background-image: var(--hero-overlay), url('/image 11.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -159,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-glass {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(13, 9, 29, 0.65);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--glass-border);
   position: sticky;
   top: 0;
@@ -199,19 +269,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Glassmorphism Cards */
 .glass-card {
   background: var(--glass-bg);
-  border: 1px solid rgba(192, 132, 252, 0.15);
+  border: 1px solid var(--card-border);
   border-radius: 20px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), 0 0 10px 1px rgba(124, 58, 237, 0.04);
+  box-shadow: var(--card-shadow);
   transition: var(--transition-smooth);
 }
 
 .glass-card:hover {
   border-color: rgba(244, 114, 182, 0.7);
-  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5), 
-              0 0 24px 6px rgba(124, 58, 237, 0.35), 
-              0 0 14px 3px rgba(244, 114, 182, 0.25);
+  box-shadow: var(--card-shadow-hover);
   transform: translateY(-4px);
 }
 
@@ -253,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   border: 1px solid var(--glass-border);
   position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--media-bg);
 }
 
 .project-image-container img {
@@ -285,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 380px;
   object-fit: cover;
   border-radius: 50%; /* Clean circular format */
-  border: 4px solid rgba(255, 255, 255, 0.25); /* Whitish glass border */
+  border: 4px solid var(--profile-border); /* Whitish glass border */
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 20px 2px rgba(124, 58, 237, 0.18); /* Subtle purple drop shadow glow */
   display: block;
 }
@@ -330,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Form Styles */
 .form-input {
   width: 100%;
-  background: rgba(13, 9, 29, 0.45);
+  background: var(--input-bg);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 14px 18px;
@@ -344,7 +412,7 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
   border-color: #7c3aed;
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
-  background: rgba(13, 9, 29, 0.65);
+  background: var(--input-bg-focus);
 }
 
 /* Tags styling */
@@ -355,8 +423,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 9999px;
   font-size: 0.8rem;
   font-weight: 600;
-  background: rgba(255, 161, 197, 0.15);
-  border: 1px solid rgba(255, 161, 197, 0.25);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
   color: var(--accent-pink);
 }
 
@@ -382,7 +450,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0;
   top: 0;
-  color: #FFA1C5;
+  color: var(--accent-pink);
   font-weight: bold;
 }
 
@@ -393,7 +461,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 48px;
   text-align: left;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-subtle);
 }
 
 .hero-image-container {
@@ -446,4 +514,124 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6px 12px;
     font-size: 0.85rem;
   }
+}
+
+/* Light theme: tone down the ambient glows and hero shadow */
+:root[data-theme="light"] body::before {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
+}
+:root[data-theme="light"] body::after {
+  background: radial-gradient(circle, rgba(219, 39, 119, 0.06) 0%, transparent 70%);
+}
+:root[data-theme="light"] .hero-glass-card {
+  box-shadow: var(--card-shadow);
+}
+:root[data-theme="light"] .form-input::placeholder {
+  color: #8a8598;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-1);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  border-color: var(--accent-pink);
+  color: var(--accent-pink);
+  transform: rotate(-12deg);
+}
+
+/* ---------- Butterfly cursor ---------- */
+:root {
+  --butterfly-fill: #ffffff;
+  --butterfly-glow-1: rgba(255, 92, 205, 0.95);
+  --butterfly-glow-2: rgba(244, 114, 182, 0.7);
+}
+:root[data-theme="light"] {
+  /* White would vanish on ivory, so tint the body pink and deepen the glow */
+  --butterfly-fill: #ffe3f3;
+  --butterfly-glow-1: rgba(236, 72, 153, 0.95);
+  --butterfly-glow-2: rgba(219, 39, 119, 0.55);
+}
+
+/* Hide the native pointer everywhere once the butterfly is active */
+html.butterfly-cursor-on,
+html.butterfly-cursor-on * {
+  cursor: none !important;
+}
+
+.butterfly-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+}
+
+.butterfly-svg {
+  display: block;
+  /* Put the butterfly's head on the pointer and tilt it like it's in flight */
+  margin: -16px 0 0 -22px;
+  transform: rotate(-24deg);
+  transform-origin: 22px 16px;
+  fill: var(--butterfly-fill);
+  stroke: var(--butterfly-fill);
+  filter: drop-shadow(0 0 3px var(--butterfly-glow-1)) drop-shadow(0 0 9px var(--butterfly-glow-2));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.butterfly-cursor.is-hovering .butterfly-svg {
+  transform: rotate(-24deg) scale(1.25);
+  filter: drop-shadow(0 0 4px var(--butterfly-glow-1)) drop-shadow(0 0 14px var(--butterfly-glow-1));
+}
+.butterfly-cursor.is-pressed .butterfly-svg {
+  transform: rotate(-24deg) scale(0.9);
+}
+
+/* Wing flap: 6 discrete frames at 12 fps (0.5s per cycle), like a sprite sheet */
+.butterfly-wing {
+  transform-box: view-box;
+  transform-origin: 32px 32px;
+  animation: butterflyFlap 0.5s infinite;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes butterflyFlap {
+  0%      { transform: scaleX(1); }
+  16.66%  { transform: scaleX(0.72); }
+  33.33%  { transform: scaleX(0.38); }
+  50%     { transform: scaleX(0.14); }
+  66.66%  { transform: scaleX(0.38); }
+  83.33%  { transform: scaleX(0.72); }
+  100%    { transform: scaleX(1); }
+}
+
+.butterfly-cursor.is-hovering .butterfly-wing {
+  animation-duration: 0.33s; /* flaps faster over clickable things */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .butterfly-wing { animation: none; }
+}
+
+/* Light theme: crisp white header with a hairline divider, white theme toggle */
+:root[data-theme="light"] .header-glass {
+  border-bottom-color: rgba(31, 26, 46, 0.08);
+  box-shadow: 0 1px 12px rgba(31, 26, 46, 0.04);
+}
+:root[data-theme="light"] .theme-toggle {
+  background: #ffffff;
+  border-color: rgba(31, 26, 46, 0.12);
 }

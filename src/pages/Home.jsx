@@ -86,7 +86,7 @@ export default function Home({ setCurrentPage }) {
     <div className="animate-fade-in">
       {/* Hero Section */}
       <section style={{
-        backgroundImage: 'linear-gradient(rgba(7, 5, 18, 0.45), rgba(7, 5, 18, 0.85)), url("/image 11.png")',
+        backgroundImage: 'var(--hero-overlay), url("/image 11.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: '100px 24px',
@@ -99,7 +99,7 @@ export default function Home({ setCurrentPage }) {
           {/* Hero Left: Glass Card */}
           <div className="glass-card hero-glass-card">
             <span style={{
-              color: 'white',
+              color: 'var(--text-primary)',
               fontWeight: '700',
               fontSize: '1rem',
               textTransform: 'uppercase',
@@ -116,7 +116,7 @@ export default function Home({ setCurrentPage }) {
               fontFamily: 'var(--font-heading)'
             }}>
               <span className="text-gradient">Jennifer Gwen</span> <br />
-              <span style={{ color: 'white' }}>Tanadi</span>
+              <span style={{ color: 'var(--text-primary)' }}>Tanadi</span>
             </h1>
             <p style={{
               color: 'var(--text-secondary)',
@@ -148,7 +148,7 @@ export default function Home({ setCurrentPage }) {
       </section>
 
       {/* Summary & Education Section */}
-      <section style={{ padding: '80px 24px', background: 'rgba(10, 7, 26, 0.95)' }}>
+      <section style={{ padding: '80px 24px', background: 'var(--bg-secondary)' }}>
         <div className="container" style={{
           display: 'flex',
           flexWrap: 'wrap',
@@ -165,7 +165,7 @@ export default function Home({ setCurrentPage }) {
                 left: '0',
                 width: '60px',
                 height: '4px',
-                background: 'linear-gradient(135deg, var(--accent-purple), var(--accent-pink))',
+                background: 'var(--accent-gradient-short)',
                 borderRadius: '2px'
               }}></span>
             </h2>
@@ -186,7 +186,7 @@ export default function Home({ setCurrentPage }) {
                 left: '0',
                 width: '60px',
                 height: '4px',
-                background: 'linear-gradient(135deg, var(--accent-purple), var(--accent-pink))',
+                background: 'var(--accent-gradient-short)',
                 borderRadius: '2px'
               }}></span>
             </h2>
@@ -208,7 +208,7 @@ export default function Home({ setCurrentPage }) {
                     <GraduationCap size={20} />
                   </div>
                   <div>
-                    <h3 style={{ fontSize: '1.25rem', color: 'white', fontWeight: '600' }}>{edu.school}</h3>
+                    <h3 style={{ fontSize: '1.25rem', color: 'var(--text-primary)', fontWeight: '600' }}>{edu.school}</h3>
                     <p style={{ color: 'var(--accent-pink)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.degree}</p>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: '4px 0' }}>{edu.duration}</p>
                     {edu.details && <p style={{ color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: '500' }}>{edu.details}</p>}
@@ -221,7 +221,7 @@ export default function Home({ setCurrentPage }) {
       </section>
 
       {/* Skills Section */}
-      <section style={{ padding: '80px 24px', background: 'rgba(7, 5, 20, 1)' }}>
+      <section style={{ padding: '80px 24px', background: 'var(--bg-primary)' }}>
         <div className="container">
           <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '16px' }}>
             My <span className="text-gradient">Skills</span>
@@ -246,8 +246,8 @@ export default function Home({ setCurrentPage }) {
                 style={{
                   textTransform: 'capitalize',
                   border: 'none',
-                  background: activeTab === tab ? 'linear-gradient(135deg, var(--btn-purple) 0%, var(--btn-pink) 100%)' : 'rgba(255, 255, 255, 0.05)',
-                  color: activeTab === tab ? 'white' : 'var(--text-secondary)'
+                  background: activeTab === tab ? 'linear-gradient(135deg, var(--btn-purple) 0%, var(--btn-pink) 100%)' : 'var(--surface-1)',
+                  color: activeTab === tab ? '#ffffff' : 'var(--text-secondary)'
                 }}
               >
                 {tab === 'technical' ? (
@@ -286,7 +286,7 @@ export default function Home({ setCurrentPage }) {
                   }}>
                     <IconComponent size={24} />
                   </div>
-                  <h3 style={{ fontSize: '1.25rem', color: 'white', marginBottom: '12px' }}>{skill.name}</h3>
+                  <h3 style={{ fontSize: '1.25rem', color: 'var(--text-primary)', marginBottom: '12px' }}>{skill.name}</h3>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{skill.level}</p>
                 </div>
               );
@@ -296,7 +296,7 @@ export default function Home({ setCurrentPage }) {
       </section>
 
       {/* Certifications and Achievements Section */}
-      <section style={{ padding: '80px 24px', background: 'rgba(10, 7, 26, 0.95)' }}>
+      <section style={{ padding: '80px 24px', background: 'var(--bg-secondary)' }}>
         <div className="container" style={{
           display: 'flex',
           flexWrap: 'wrap',
@@ -346,15 +346,15 @@ export default function Home({ setCurrentPage }) {
                   <div key={idx} style={{
                     padding: '16px',
                     borderRadius: '12px',
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(255, 255, 255, 0.04)',
+                    background: 'var(--surface-0)',
+                    border: '1px solid var(--border-subtle)',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     gap: '16px'
                   }}>
                     <div>
-                      <h4 style={{ color: 'white', fontSize: '1rem', fontWeight: '600' }}>{cert.title}</h4>
+                      <h4 style={{ color: 'var(--text-primary)', fontSize: '1rem', fontWeight: '600' }}>{cert.title}</h4>
                       <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>{cert.issuer}</p>
                     </div>
                     <span className="badge" style={{ flexShrink: 0 }}>{cert.year}</span>
@@ -389,7 +389,7 @@ export default function Home({ setCurrentPage }) {
                     <Award size={18} />
                   </div>
                   <div>
-                    <h4 style={{ color: 'white', fontSize: '1.05rem', fontWeight: '600' }}>{award.title}</h4>
+                    <h4 style={{ color: 'var(--text-primary)', fontSize: '1.05rem', fontWeight: '600' }}>{award.title}</h4>
                     {award.issuer && <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>{award.issuer}</p>}
                     <p style={{ color: 'var(--accent-pink)', fontSize: '0.85rem', fontWeight: '500', marginTop: '2px' }}>{award.year}</p>
                   </div>

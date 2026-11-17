@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ButterflyCursor from './components/ButterflyCursor';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
@@ -65,6 +66,7 @@ function App() {
         width: '100%'
       }}
     >
+      <ButterflyCursor />
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       
       <main style={{ flexGrow: 1, width: '100%' }}>

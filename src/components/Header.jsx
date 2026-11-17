@@ -1,8 +1,40 @@
-import React, { useState } from 'react';
-import { Menu, X, Sparkles } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Sparkles, Sun, Moon } from 'lucide-react';
+
+function useTheme() {
+  const [theme, setTheme] = useState(
+    () => document.documentElement.getAttribute('data-theme') || 'dark'
+  );
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {
+      // Storage can be blocked (private mode); the theme still applies for this visit.
+    }
+  }, [theme]);
+
+  return [theme, () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))];
+}
+
+function ThemeToggle({ theme, onToggle }) {
+  const isDark = theme === 'dark';
+  return (
+    <button
+      className="theme-toggle"
+      onClick={onToggle}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={isDark ? 'Light mode' : 'Dark mode'}
+    >
+      {isDark ? <Sun size={18} /> : <Moon size={18} />}
+    </button>
+  );
+}
 
 export default function Header({ currentPage, setCurrentPage }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, toggleTheme] = useTheme();
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -25,14 +57,14 @@ export default function Header({ currentPage, setCurrentPage }) {
           onClick={() => handleNavClick('home')}
           style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
         >
-          <Sparkles className="w-5 h-5" style={{ color: '#c084fc' }} />
+          <Sparkles className="w-5 h-5" style={{ color: 'var(--accent-purple)' }} />
           <span style={{ fontFamily: 'var(--font-heading)', fontWeight: '800', fontSize: '1.25rem', letterSpacing: '-0.02em' }}>
             Jen's Portofolio
           </span>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="md-flex" style={{ gap: '8px' }}>
+        <nav className="md-flex" style={{ gap: '8px', alignItems: 'center' }}>
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -47,16 +79,20 @@ export default function Header({ currentPage, setCurrentPage }) {
               {item.label}
             </button>
           ))}
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </nav>
 
         {/* Mobile Menu Button */}
         <div className="md-hidden">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
           <button 
             onClick={() => setIsOpen(!isOpen)}
             style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+          </div>
         </div>
       </div>
 

@@ -20,7 +20,7 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
   if (!activity) {
     return (
       <div style={{ padding: '80px 24px', textAlign: 'center', minHeight: '80vh' }}>
-        <h2 style={{ color: 'white' }}>Activity not found</h2>
+        <h2 style={{ color: 'var(--text-primary)' }}>Activity not found</h2>
         <button onClick={() => setCurrentPage('activities')} className="btn-gradient" style={{ marginTop: '20px' }}>
           Back to Activities
         </button>
@@ -33,7 +33,7 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
   const explanationText = activity.description || activity.points.join('\n\n');
 
   return (
-    <div className="animate-fade-in" style={{ padding: '60px 24px', background: 'rgba(7, 5, 20, 1)', minHeight: '85vh' }}>
+    <div className="animate-fade-in" style={{ padding: '60px 24px', background: 'var(--bg-primary)', minHeight: '85vh' }}>
       <div className="container" style={{ maxWidth: '900px' }}>
         {/* Back Button */}
         <button
@@ -51,7 +51,7 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
             marginBottom: '32px',
             transition: 'var(--transition-smooth)'
           }}
-          onMouseEnter={(e) => e.target.style.color = 'white'}
+          onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'}
           onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
         >
           <ArrowLeft size={20} /> Back to Activities
@@ -68,7 +68,7 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
           {/* Left Column: Image Gallery */}
           <div style={{ flex: '1 1 350px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
             <div className="glass-card" style={{ padding: '24px' }}>
-              <h3 style={{ fontSize: '1.25rem', color: 'white', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <h3 style={{ fontSize: '1.25rem', color: 'var(--text-primary)', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Image size={18} className="text-purple-400" /> Activity Gallery
               </h3>
 
@@ -82,7 +82,7 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
                   overflow: 'hidden',
                   border: '1px solid var(--glass-border)',
                   cursor: 'pointer',
-                  backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                  backgroundColor: 'var(--media-bg)',
                   marginBottom: '16px',
                   display: 'flex',
                   justifyContent: 'center',
@@ -175,7 +175,7 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
                 alignItems: 'center',
                 marginBottom: '24px'
               }}>
-                <h3 style={{ fontSize: '1.25rem', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <h3 style={{ fontSize: '1.25rem', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <List size={18} className="text-purple-400" /> Explanation & Notes
                 </h3>
               </div>
@@ -343,7 +343,7 @@ export default function ActivityDetail({ setCurrentPage, selectedActivityId }) {
           {/* Index indicator */}
           <div style={{
             marginTop: '20px',
-            color: 'var(--text-secondary)',
+            color: '#cbd5e1',
             fontSize: '0.9rem',
             background: 'rgba(0,0,0,0.5)',
             padding: '6px 16px',
